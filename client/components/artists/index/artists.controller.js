@@ -6,9 +6,14 @@ function ArtistsController(artistsService) {
   activate();
 
   function activate() {
-    artistsService.getAllArtists().then(response => {
-      vm.artists = response;
-    });
+  }
+
+  vm.searchArtist = function () {
+
+        // the new User object will be created by binding to the form inputs
+        const artistSearched = { artist: vm.artist };
+        //add a new user
+        artistsService.searchArtist(artistSearched)
   }
 }
 

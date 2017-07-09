@@ -15,6 +15,10 @@ function router ($stateProvider, $urlRouterProvider) {
 			url: "/artists",
 			template: "<discover-artists></discover-artists>"
 		})
+		.state("events", {
+			url: "/events",
+			template: "<discover-events></discover-events>"
+		})
 
 	$urlRouterProvider.otherwise("/");
 }

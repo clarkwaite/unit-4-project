@@ -1,1 +1,8 @@
 <h2>Artists</h2>
+
+    <form name="searchArtist" ng-submit="$ctrl.searchArtist()">
+      <div class="searchArtist">
+        <div>Search Artists:<input type="text" ng-model="$ctrl.artist" required></div>
+      </div>
+      <button class="btn" type="submit" value="Search Artists">Submit</button>
+    </form>
