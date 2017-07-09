@@ -9,7 +9,7 @@ function router ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state("home", {
 			url: "/",
-			template: "<discover-artists></discover-artists>"
+			template: "<discover-home></discover-home>"
 		})
 		.state("artists", {
 			url: "/artists",

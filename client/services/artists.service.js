@@ -9,3 +9,5 @@ function artistsService($http) {
 		return $http.get("/artists").then(response => response.data);
 	};
 }
+
+angular.module("DiscoverSound").service("artistsService", artistsService);
