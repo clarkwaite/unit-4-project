@@ -2,7 +2,7 @@ EventsController.$inject = ["eventsService"];
 
 function EventsController(eventsService) {
   const vm = this;
-  vm.data = "I'm blank now";
+  vm.data = null;
 
   activate();
 
