@@ -8795,6 +8795,7 @@ ArtistsController.$inject = ["artistsService"];
 
 function ArtistsController(artistsService) {
   var vm = this;
+  vm.data = null;
 
   activate();
 
@@ -8828,7 +8829,7 @@ EventsController.$inject = ["eventsService"];
 
 function EventsController(eventsService) {
   var vm = this;
-  vm.data = "I'm blank now";
+  vm.data = null;
 
   activate();
 
@@ -45042,7 +45043,7 @@ angular.module("DiscoverSound").component("discoverArtists", artistsComponent);
 /* 94 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Artists</h2>\n\n    <form name=\"searchArtist\" ng-submit=\"$ctrl.searchArtist()\">\n      <div class=\"searchArtist\">\n        <div>Search Artists:<input type=\"text\" ng-model=\"$ctrl.artist\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Artists\">Submit</button>\n    </form>";
+module.exports = "<h2>Artists</h2>\n\n    <form name=\"searchArtist\" ng-submit=\"$ctrl.searchArtist()\">\n      <div class=\"searchArtist\">\n        <div>Search Artists:<input type=\"text\" ng-model=\"$ctrl.artist\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Artists\">Submit</button>\n    </form>\n       <ul>\n      <li ng-repeat=\"artist in $ctrl.data.data\">\n        <p>{{artist.name}}</p>\n      </li>\n   </ul>";
 
 /***/ }),
 /* 95 */
@@ -45072,7 +45073,7 @@ angular.module("DiscoverSound").component("discoverEvents", eventsComponent);
 /* 96 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Events</h2>\n\n    <form name=\"searchEvent\" ng-submit=\"$ctrl.searchEvent()\">\n      <div class=\"searchEvent\">\n        <div>Search Events:<input type=\"text\" ng-model=\"$ctrl.event\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Event\">Submit</button>\n      <h1>{{$ctrl.data}}</h1>\n    </form>";
+module.exports = "<h2>Events</h2>\n\n    <form name=\"searchEvent\" ng-submit=\"$ctrl.searchEvent()\">\n      <div class=\"searchEvent\">\n        <div>Search Events:<input type=\"text\" ng-model=\"$ctrl.event\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Event\">Submit</button>\n    </form>\n\n    <ul>\n      <li ng-repeat=\"event in $ctrl.data\">\n        <p>{{event.venue.name}}</p>\n        <p>{{event.datetime}}</p>\n      </li>\n   </ul>";
 
 /***/ }),
 /* 97 */

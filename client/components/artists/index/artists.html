@@ -6,3 +6,8 @@
       </div>
       <button class="btn" type="submit" value="Search Artists">Submit</button>
     </form>
+       <ul>
+      <li ng-repeat="artist in $ctrl.data.data">
+        <p>{{artist.name}}</p>
+      </li>
+   </ul>

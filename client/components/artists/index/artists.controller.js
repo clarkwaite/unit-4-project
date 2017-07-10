@@ -2,6 +2,7 @@ ArtistsController.$inject = ["artistsService"];
 
 function ArtistsController(artistsService) {
   const vm = this;
+  vm.data = null;
 
   activate();
 
