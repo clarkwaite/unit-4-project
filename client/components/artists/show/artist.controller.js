@@ -5,7 +5,6 @@ function ArtistController(artistsService, $state, $stateParams, $http) {
   vm.artist = {
   artist: $stateParams.artist
   };
-  console.log('dfkjkdjgdkgjfkg',vm.artist)
   
   activate(); //run when the page loads
 

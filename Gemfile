@@ -56,3 +56,8 @@ gem 'foundation-rails'
 
 # HTTParty for use in making API calls
 gem 'httparty'
+
+#for user auth
+gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth'
