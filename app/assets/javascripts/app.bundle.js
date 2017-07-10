@@ -8805,7 +8805,10 @@ function ArtistsController(artistsService) {
     // the new User object will be created by binding to the form inputs
     var artistSearched = { artist: vm.artist };
     //add a new user
-    artistsService.searchArtist(artistSearched);
+    artistsService.searchArtist(artistSearched).then(function (res) {
+      console.log(".then resp from artists controller is ", res);
+      vm.data = res;
+    });
   };
 }
 
@@ -8825,6 +8828,7 @@ EventsController.$inject = ["eventsService"];
 
 function EventsController(eventsService) {
   var vm = this;
+  vm.data = "I'm blank now";
 
   activate();
 
@@ -8835,7 +8839,10 @@ function EventsController(eventsService) {
     // the new User object will be created by binding to the form inputs
     var eventSearched = { event: vm.event };
     //add a new user
-    eventsService.searchEvent(eventSearched);
+    eventsService.searchEvent(eventSearched).then(function (res) {
+      console.log(".then resp from controller is ", res);
+      vm.data = res;
+    });
   };
 }
 
@@ -45065,7 +45072,7 @@ angular.module("DiscoverSound").component("discoverEvents", eventsComponent);
 /* 96 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Events</h2>\n\n    <form name=\"searchEvent\" ng-submit=\"$ctrl.searchEvent()\">\n      <div class=\"searchEvent\">\n        <div>Search Events:<input type=\"text\" ng-model=\"$ctrl.event\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Event\">Submit</button>\n    </form>";
+module.exports = "<h2>Events</h2>\n\n    <form name=\"searchEvent\" ng-submit=\"$ctrl.searchEvent()\">\n      <div class=\"searchEvent\">\n        <div>Search Events:<input type=\"text\" ng-model=\"$ctrl.event\" required></div>\n      </div>\n      <button class=\"btn\" type=\"submit\" value=\"Search Event\">Submit</button>\n      <h1>{{$ctrl.data}}</h1>\n    </form>";
 
 /***/ }),
 /* 97 */
@@ -45109,16 +45116,17 @@ var angular = __webpack_require__(8);
 artistsService.$inject = ["$http"];
 
 function artistsService($http) {
-	var service = this;
+  var service = this;
 
-	service.searchArtist = function (artistSearched) {
-		console.log('service', artistSearched);
-	};
-
-	// service.getAllArtists = function () {
-	// 	return $http.get("/artists").then(response => response.data);
-	// };
-}
+  service.searchArtist = function (artistSearched) {
+    var urlString = "http://localhost:5000/artists?artist=" + artistSearched.artist;
+    console.log("artistSearch is : ", artistSearched);
+    return $http.get(urlString).then(function (response) {
+      console.log("response is : ", response.data);
+      return response.data;
+    });
+  };
+};
 
 angular.module("DiscoverSound").service("artistsService", artistsService);
 
@@ -45137,18 +45145,18 @@ function eventsService($http) {
   var service = this;
 
   service.searchEvent = function (eventSearched) {
-    $http.get('https://rest.bandsintown.com/artists/' + eventSearched + '/events?app_id=discoversound', {
-      headers: { 'Authorization': 'application/json'
-
-      } }).then(function (response) {
-      console.log(response);
+    var urlString = "http://localhost:5000/events?artist=" + eventSearched.event;
+    console.log("eventSearch is : ", eventSearched);
+    return $http.get(urlString).then(function (response) {
+      console.log("response is : ", response.data);
+      return response.data;
     });
   };
 };
 
-// 	service.getAllEvents = function () {
-// 		return $http.get("/events").then(response => response.data);
-// 	};
+// service.getAllEvents = function () {
+//   return $http.get("/events").then(response => response.data);
+// };
 
 angular.module("DiscoverSound").service("eventsService", eventsService);
 

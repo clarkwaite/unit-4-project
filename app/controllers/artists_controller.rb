@@ -1,10 +1,16 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists = Artist.all
-    render json: @artists  
-    #Overwrites the assumption to render an index.html.erb
+
+    def api(artist)
+    artistSearched =  'https://rest.bandsintown.com/artists/' + artist + '/events?app_id=discoversound'
+    response = HTTParty.get(artistSearched)
+    render json: response.body
+    end
+    api(params[:artist])
+  
   end
+
 
   def create
     @artist = Artist.create!(artist_params)

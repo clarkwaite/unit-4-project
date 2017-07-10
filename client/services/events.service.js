@@ -7,18 +7,17 @@ function eventsService($http) {
 
 
   service.searchEvent = function (eventSearched) {
-  $http.get('https://rest.bandsintown.com/artists/' + eventSearched + '/events?app_id=discoversound', {
-    headers: {'Authorization': 'application/json',
-    
-  }})
-    .then(function(response) {
-            console.log(response);
-    });
-  }
+    var urlString = "http://localhost:5000/events?artist=" + eventSearched.event;
+    console.log("eventSearch is : ", eventSearched); 
+      return $http.get(urlString).then(response => {
+        console.log("response is : " , response.data);
+        return response.data;
+      });
+    };
 };
 
-// 	service.getAllEvents = function () {
-// 		return $http.get("/events").then(response => response.data);
-// 	};
+// service.getAllEvents = function () {
+//   return $http.get("/events").then(response => response.data);
+// };
 
 angular.module("DiscoverSound").service("eventsService", eventsService);
