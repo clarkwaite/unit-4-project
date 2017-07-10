@@ -1,0 +1,15 @@
+<div class='header-left'>
+  <h2>DiscoverSound</h2>
+  <p>Learn About Something New - And See Who's Playing Near You!</p>
+</div>
+
+<div ng-show="!$ctrl.currentUser.id">
+  <p><a ui-sref="signIn">Sign in</a></p>
+  <p><a ui-sref="userRegistration">Sign up</a></p>
+</div>
+<div ng-show="$ctrl.currentUser.id">
+  <p>Signed in as {{$ctrl.currentUser.email}}</p>
+  <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
+  <p><a ui-sref="Search Artists({userId: $ctrl.currentUser.id})">Favorites</a></p>
+  <p><a ui-sref="Search Events">Events</a></p>
+</div>
