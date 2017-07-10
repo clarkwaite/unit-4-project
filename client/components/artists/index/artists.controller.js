@@ -1,8 +1,9 @@
-ArtistsController.$inject = ["artistsService"];
+ArtistsController.$inject = ["artistsService", "$stateParams", "$state"];
 
-function ArtistsController(artistsService) {
+function ArtistsController(artistsService, $stateParams, $state) {
   const vm = this;
   vm.data = null;
+  vm.artist=null;
 
   activate();
 
@@ -15,10 +16,15 @@ function ArtistsController(artistsService) {
         const artistSearched = { artist: vm.artist };
         //add a new user
         artistsService.searchArtist(artistSearched).then(function(res){
-          console.log(".then resp from artists controller is " , res);
           vm.data = res;
         })
   }
+
+  vm.goToShow = function(artist) {
+    $state.go('artist', {name: artist.name, artist: artist})
+    console.log(artist)
+  }
+
 }
 
 export default ArtistsController;

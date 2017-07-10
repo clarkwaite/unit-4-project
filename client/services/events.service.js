@@ -12,6 +12,7 @@ function eventsService($http) {
       return $http.get(urlString).then(response => {
         console.log("response is : " , response.data);
         return response.data;
+        // var urlString = "http:/" +  window.location.host + "/events?artist=" + eventSearched.event;
       });
     };
 };

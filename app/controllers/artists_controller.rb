@@ -1,15 +1,23 @@
 class ArtistsController < ApplicationController
 
   def index
-
-  def api(artist)
-    artistSearched =  'http://api.musicgraph.com/api/v2/artist/suggest?api_key=c8303e90962e3a5ebd5a1f260a69b138&prefix='+artist+'&limit=10'
-    response = HTTParty.get(artistSearched)
-    render json: response.body
+    def api(artist)
+      artistSearched =  'http://api.musicgraph.com/api/v2/artist/suggest?api_key=c8303e90962e3a5ebd5a1f260a69b138&prefix='+artist+'&limit=10'
+      response = HTTParty.get(artistSearched)
+      render json: response.body
     end
     api(params[:artist])
   end
 
+  def show
+    def showApi(artistToShow)
+        puts artistToShow
+        artistShown =  'http://api.musicgraph.com/api/v2/artist/search?api_key=c8303e90962e3a5ebd5a1f260a69b138&name='+artistToShow+''
+        response = HTTParty.get(artistShown)
+        render json: response.body
+      end
+      showApi(params[:artist])
+    end
 
   def create
     @artist = Artist.create!(artist_params)

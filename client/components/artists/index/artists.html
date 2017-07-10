@@ -7,7 +7,7 @@
       <button class="btn" type="submit" value="Search Artists">Submit</button>
     </form>
        <ul>
-      <li ng-repeat="artist in $ctrl.data.data">
+      <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
         <p>{{artist.name}}</p>
       </li>
    </ul>

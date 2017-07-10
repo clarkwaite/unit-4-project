@@ -15,6 +15,11 @@ function router ($stateProvider, $urlRouterProvider) {
 			url: "/artists",
 			template: "<discover-artists></discover-artists>"
 		})
+		.state("artist", {
+			url: "/artists/:name",
+			template: "<discover-artist></discover-artist>",
+			params: {name: null, artist: null}
+		})
 		.state("events", {
 			url: "/events",
 			template: "<discover-events></discover-events>"

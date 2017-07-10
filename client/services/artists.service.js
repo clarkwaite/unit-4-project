@@ -7,13 +7,22 @@ function artistsService($http) {
 
 
   service.searchArtist = function (artistSearched) {
-    var urlString = "http://localhost:5000/artists?artist=" + artistSearched.artist;
-    console.log("artistSearch is : ", artistSearched); 
-      return $http.get(urlString).then(response => {
+    var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
+      return $http.get(searchUrl).then(response => {
         console.log("response is : " , response.data);
         return response.data;
       });
     };
+
+	service.showArtist = function (artistShown) {
+		var showUrl = "http://localhost:5000/artists?artist=" + artistShown.artist;
+		console.log("artistShown is : ", artistShown.artist); 
+			return $http.get(showUrl).then(res => {
+				console.log("response is : " , res.data);
+				return res.data;
+				});
+			};
+
 };
 
 angular.module("DiscoverSound").service("artistsService", artistsService);
