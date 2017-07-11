@@ -3,23 +3,38 @@ ArtistController.$inject = ["artistsService", '$auth', '$state', "$stateParams",
 function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
   const vm = this;
   vm.artist = {
-  artist: $stateParams.artist
+    artist: $stateParams.artist
   };
-  
+
   activate(); //run when the page loads
 
   function activate() {
-    // vm.searchArtist = function () {
-    //   const artistShown = { artist: $state.params.name };
-    //   console.log($state.params.name)
-    //   //add a new user
-    //   artistsService.showArtist(artistShown).then(function (res) {
-    //     console.log(".then res from artists controller is ", res);
-    //     vm.showArtist = res;
-    //   })
-    // }
-    // vm.searchArtist()
+
   } //close Activate function
+
+  vm.saveToFavorites = function () {
+    console.log('button pressed')
+    let userId = $stateParams.userId;
+    let artistId = $stateParams.artistId;
+    artistsService.saveToFavorites(artistId, userId)
+      .then(res => {
+        vm.favorite = res.data;
+      })
+      .catch(res => {
+        console.log(res);
+      });
+  }
+
+  vm.deleteFromFavorites = function () {
+    artistsService.deleteFromFavorites(vm.favorite.id)
+      .then(res => {
+        console.log(res.data.message);
+      })
+      .catch(res => {
+        console.log('error deleting favorite');
+        console.log(res.data.error);
+      })
+  }
 
 
 } //close Controller function

@@ -41,9 +41,9 @@ function router ($stateProvider, $urlRouterProvider) {
       }
 		})
 		.state("artist", {
-			url: "/users/:userId/artists/:name",
+			url: "/users/:userId/artists/:artistId",
 			template: "<discover-artist></discover-artist>",
-			params: {name: null, artist: null},
+			params: {id: null, artist: null},
 			resolve: {
         auth: function($auth) {
           return $auth.validateUser();

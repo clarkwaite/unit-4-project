@@ -11,6 +11,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create!(artist_params)
+    render json: @artist
     # redirect_to artist_path(@artist)
   end
 
