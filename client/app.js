@@ -23,7 +23,7 @@ function router ($stateProvider, $urlRouterProvider) {
       template: "<user-registration></user-registration>"
     })
 		.state("home", {
-			url: "/users/:userId/",
+			url: "/",
 			template: "<discover-home></discover-home>",
 			resolve: {
         auth: function($auth) {

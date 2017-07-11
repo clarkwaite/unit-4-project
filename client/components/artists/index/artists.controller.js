@@ -1,6 +1,6 @@
-ArtistsController.$inject = ["artistsService", "$stateParams", "$state"];
+ArtistsController.$inject = ["artistsService", '$auth', "$stateParams", "$state"];
 
-function ArtistsController(artistsService, $stateParams, $state) {
+function ArtistsController(artistsService, $auth, $stateParams, $state) {
   const vm = this;
   vm.data = null;
   vm.artist=null;
@@ -21,7 +21,7 @@ function ArtistsController(artistsService, $stateParams, $state) {
   }
 
   vm.goToShow = function(artist) {
-    $state.go('artist', {name: artist.name, artist: artist})
+    $state.go('artist', {userId: $auth.user.id, name: artist.name, artist: artist})
     console.log(artist)
   }
 

@@ -1,6 +1,6 @@
-ArtistController.$inject = ["artistsService", '$state', "$stateParams", "$http"];
+ArtistController.$inject = ["artistsService", '$auth', '$state', "$stateParams", "$http"];
 
-function ArtistController(artistsService, $state, $stateParams, $http) {
+function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
   const vm = this;
   vm.artist = {
   artist: $stateParams.artist

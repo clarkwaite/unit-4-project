@@ -9,16 +9,6 @@ class ArtistsController < ApplicationController
     api(params[:artist])
   end
 
-  def show
-    def showApi(artistToShow)
-        puts artistToShow
-        artistShown =  'http://api.musicgraph.com/api/v2/artist/search?api_key=c8303e90962e3a5ebd5a1f260a69b138&name='+artistToShow+''
-        response = HTTParty.get(artistShown)
-        render json: response.body
-      end
-      showApi(params[:artist])
-    end
-
   def create
     @artist = Artist.create!(artist_params)
     # redirect_to artist_path(@artist)
@@ -27,9 +17,7 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name, :genre, :website, :images, :spotify_href, :spotify_id)
+    params.require(:artist).permit(:name, :genre, :nationality, :years_active, :musicgraph_id, :spotify_id)
   end
 
-
 end
-

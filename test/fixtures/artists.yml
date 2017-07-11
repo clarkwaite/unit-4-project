@@ -2,16 +2,14 @@
 
 one:
   name: MyString
+  nationality: MyString
+  years_active: MyString
   genre: MyString
-  website: MyString
-  images: MyString
-  spotify_href: MyString
-  spotify_id: MyString
+  musicgraph_id: MyString
 
 two:
   name: MyString
+  nationality: MyString
+  years_active: MyString
   genre: MyString
-  website: MyString
-  images: MyString
-  spotify_href: MyString
-  spotify_id: MyString
+  musicgraph_id: MyString
