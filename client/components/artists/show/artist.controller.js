@@ -13,7 +13,6 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
   } //close Activate function
 
   vm.saveToFavorites = function () {
-    console.log('button pressed')
     let userId = $stateParams.userId;
     let artistId = $stateParams.artistId;
     artistsService.saveToFavorites(artistId, userId)

@@ -30,10 +30,13 @@ function ArtistsController(artistsService, $auth, $stateParams, $state) {
       spotify_id: artist.spotify_id
     };
     vm.saveArtist().then(savedArtist => {
-      $state.go('artist', { userId: $auth.user.id, artistId: savedArtist.id, name: savedArtist.name, artist: savedArtist })
+      $state.go('artist', { userId: $auth.user.id, artistId: savedArtist.id, artist: artist })
     });
   }
   vm.saveArtist = function () {
+    //if searchdatabase for saved artist musicgraph_id == artist.musicgraph_id
+      //return saved artist
+    //else
     return artistsService.saveArtist(vm.artist)
   };
 

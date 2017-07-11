@@ -10,9 +10,16 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.create!(artist_params)
-    render json: @artist
-    # redirect_to artist_path(@artist)
+    @artist = Artist.new(artist_params)
+    if @artist.save
+      render json: @artist
+    else
+      #lets find the artist that already exists.... using the unique key that's already there
+      artist = Artist.find_by({musicgraph_id: params["artist"]["musicgraph_id"]})
+      render json: artist
+    end
+
+      # redirect_to artist_path(@artist)
   end
 
   private
