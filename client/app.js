@@ -23,7 +23,7 @@ function router ($stateProvider, $urlRouterProvider) {
       template: "<user-registration></user-registration>"
     })
 		.state("home", {
-			url: "/",
+			url: "/users/:userId/",
 			template: "<discover-home></discover-home>",
 			resolve: {
         auth: function($auth) {
@@ -32,7 +32,7 @@ function router ($stateProvider, $urlRouterProvider) {
       }
 		})
 		.state("artists", {
-			url: "/artists",
+			url: "/users/:userId/artists",
 			template: "<discover-artists></discover-artists>",
 			resolve: {
         auth: function($auth) {
@@ -41,7 +41,7 @@ function router ($stateProvider, $urlRouterProvider) {
       }
 		})
 		.state("artist", {
-			url: "/artists/:name",
+			url: "/users/:userId/artists/:name",
 			template: "<discover-artist></discover-artist>",
 			params: {name: null, artist: null},
 			resolve: {
@@ -51,14 +51,23 @@ function router ($stateProvider, $urlRouterProvider) {
       }
 		})
 		.state("events", {
-			url: "/events",
+			url: "/users/:userId/events",
 			template: "<discover-events></discover-events>",
 			resolve: {
         auth: function($auth) {
           return $auth.validateUser();
         }
       }
-		}),
+		})
+		.state("favorites", {
+      url: "/users/:userId/favorites",
+      template: "<favorites></favorites>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
+    })
 		
 	$urlRouterProvider.otherwise("/");
 }

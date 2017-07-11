@@ -1,5 +1,5 @@
 <div class='header-left'>
-  <h2>DiscoverSound</h2>
+  <h2><a ui-sref="artists({userId: $ctrl.currentUser.id})">DiscoverSound</a></h2>
   <p>Learn About Something New - And See Who's Playing Near You!</p>
 </div>
 
@@ -10,6 +10,6 @@
 <div ng-show="$ctrl.currentUser.id">
   <p>Signed in as {{$ctrl.currentUser.email}}</p>
   <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
-  <p><a ui-sref="Search Artists({userId: $ctrl.currentUser.id})">Favorites</a></p>
-  <p><a ui-sref="Search Events">Events</a></p>
+  <p><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search Artists</a></p>
+  <p><a ui-sref="events({userId: $ctrl.currentUser.id})">Search Events</a></p>
 </div>
