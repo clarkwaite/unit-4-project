@@ -5,7 +5,6 @@ artistsService.$inject = ["$http"];
 function artistsService($http) {
   const service = this;
 
-
   service.searchArtist = function (artistSearched) {
     var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
       return $http.get(searchUrl).then(response => {
@@ -23,6 +22,13 @@ function artistsService($http) {
 				});
 			};
 
-};
+  service.saveArtist = function (artist) {
+      console.log('you hit the artist service')
+		  return $http.post("/artists", artist).then(response => {
+		  return response.data;
+		});
+	};
+
+}; //close Service
 
 angular.module("DiscoverSound").service("artistsService", artistsService);
