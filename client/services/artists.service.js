@@ -6,8 +6,7 @@ function artistsService($http) {
 	const service = this;
 
 	service.searchArtist = function (artistSearched) {
-		// var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
-		var searchUrl = "/spotify";
+		var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
 		return $http.get(searchUrl).then(response => {
 			console.log("response is : ", response.data);
 			return response.data;
@@ -32,13 +31,6 @@ function artistsService($http) {
 
 	service.saveToFavorites = function (artistId, userId) {
 		return $http.post('/favorites', { "favorite": { "artist_id": artistId, "user_id": userId } })
-			.then(res => {
-				return res;
-			});
-	}
-
-	service.deleteFromFavorites = function (favoriteId) {
-		return $http.delete('/favorites/' + favoriteId)
 			.then(res => {
 				return res;
 			});

@@ -22,10 +22,10 @@ vm.deleteFromFavorites = function (favoriteArtistId) {
     favoritesService.deleteFromFavorites(vm.currentUser.id, favoriteArtistId)
       .then(res => {
         console.log(res.data.message);
+        activate()
       })
       .catch(res => {
         console.log('error deleting favorite');
-        console.log(res.data.error);
       })
   }
 
