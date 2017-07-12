@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :events
   get "users/:userId/favorites", to: "favorites#index", as: "favorites"
   post "/favorites", to: "favorites#new", as: "new_favorites"
-  delete "/favorites", to: "favorites#destroy"
+  delete "users/:user_id/favorites/:artist_id", to: "favorites#destroy"
   
   # namespace :api do
   # end

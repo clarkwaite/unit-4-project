@@ -49,6 +49,16 @@ function router ($stateProvider, $urlRouterProvider) {
           return $auth.validateUser();
         }
       }
+    })
+    .state("related", {
+			url: "/users/:userId/artists/related",
+			template: "<discover-related></discover-related>",
+			params: {id: null, artist: null,},
+			resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
 		})
 		.state("events", {
 			url: "/users/:userId/events",

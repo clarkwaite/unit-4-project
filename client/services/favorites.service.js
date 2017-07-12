@@ -11,7 +11,7 @@ function favoritesService ($http) {
   };
 
   service.deleteFromFavorites = function (userId, favoriteArtistId) {
-    console.log("The Delete Service")
+    console.log("userId", userId, 'artistId', favoriteArtistId)
     return $http.delete("/users/"+userId+"/favorites/"+favoriteArtistId)
     .then(res => {
       return res.status;

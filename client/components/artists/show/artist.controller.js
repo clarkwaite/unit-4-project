@@ -21,6 +21,7 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
       musicgraph_id: artist.id,
       spotify_id: artist.spotify_id
     };
+    
     artistsService.saveArtist(artistToSave)
       .then(res => {
         let artistId = res.id;
@@ -33,7 +34,10 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
             console.log(res);
           });
       });
-    
+  }
+
+  vm.goToRelated = function (artist) {
+    $state.go('related', { userId: $auth.user.id, artistId: $stateParams.artistId, artist: artist })
   }
 
 } //close Controller function

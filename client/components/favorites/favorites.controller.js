@@ -18,8 +18,8 @@ function FavoritesController(favoritesService, $auth, $state, $stateParams){
     })
   }
 
-vm.deleteFromFavorites = function (currentUser, favoriteArtistId) {
-    favoritesService.deleteFromFavorites(favoriteArtistId)
+vm.deleteFromFavorites = function (favoriteArtistId) {
+    favoritesService.deleteFromFavorites(vm.currentUser.id, favoriteArtistId)
       .then(res => {
         console.log(res.data.message);
       })

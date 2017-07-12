@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
 
   def index
     def api(artist)
-      artistSearched =  'http://api.musicgraph.com/api/v2/artist/suggest?api_key=c8303e90962e3a5ebd5a1f260a69b138&prefix='+artist+'&limit=10'
+      artistSearched = 'http://api.musicgraph.com/api/v2/artist/suggest?api_key=83dccfcabc5dc9c38740b98935e7c209&prefix='+artist+'&limit=10'
       response = HTTParty.get(artistSearched)
       render json: response.body
     end
