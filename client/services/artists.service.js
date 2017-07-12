@@ -6,7 +6,8 @@ function artistsService($http) {
 	const service = this;
 
 	service.searchArtist = function (artistSearched) {
-		var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
+		// var searchUrl = "http://localhost:5000/artists?artist=" + artistSearched.artist;
+		var searchUrl = "/spotify";
 		return $http.get(searchUrl).then(response => {
 			console.log("response is : ", response.data);
 			return response.data;

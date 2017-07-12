@@ -13,5 +13,14 @@ class Artist < ApplicationRecord
     self.spotify_id ||= 'Data Unavailable'
        
     end
-end
 
+    
+
+
+
+
+
+
+end #closed model
+
+# RSpotify.authenticate("1112213d67ce43cd8518c656425e6cb7", "055492756bd04666b62fa7bda863a53b")

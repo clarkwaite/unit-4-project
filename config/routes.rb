@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
   # resources :groups, except: [:new, :edit]
+  get "/spotify" => "artists#spotify"
   get 'home/index'
   root "home#index"
   resources :artists
