@@ -1,6 +1,6 @@
-FavoritesService.$inject = ["$http"];
+favoritesService.$inject = ["$http"];
 
-function FavoritesService ($http) {
+function favoritesService ($http) {
   const service = this;
 
   service.getFavorites = function (userId) {
@@ -9,8 +9,16 @@ function FavoritesService ($http) {
       return res.data;
     });
   };
+
+  service.deleteFromFavorites = function (userId, favoriteArtistId) {
+    console.log("The Delete Service")
+    return $http.delete("/users/"+userId+"/favorites/"+favoriteArtistId)
+    .then(res => {
+      return res.status;
+    });
+  };
   
   return service;
 }
 
-angular.module("DiscoverSound").service("favoritesService", FavoritesService);
+angular.module("DiscoverSound").service("favoritesService", favoritesService);

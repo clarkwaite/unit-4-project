@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "home#index"
   resources :artists
   resources :events
-  get "/favorites", to: "favorites#index", as: "favorites"
+  get "users/:userId/favorites", to: "favorites#index", as: "favorites"
   post "/favorites", to: "favorites#new", as: "new_favorites"
   delete "/favorites", to: "favorites#destroy"
   

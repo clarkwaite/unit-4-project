@@ -1,9 +1,9 @@
 
 
-<h2>{{$ctrl.artist.artist.name}}</h2>
+<h2>{{$ctrl.artist.name}}</h2>
 <img ng-src="http://loremflickr.com/400/250/concert" alt="Band Image" />
-<h3>Genre: {{$ctrl.artist.artist.genre}}</h3>
-<h3>Nationality: {{$ctrl.artist.artist.nationality}}</h3>
-<h3>Years Active: {{$ctrl.artist.artist.years_active}}</h3>
+<h3>Genre: {{$ctrl.artist.main_genre}}</h3>
+<h3>Nationality: {{$ctrl.artist.country_of_origin}}</h3>
+<h3>Years Active: {{$ctrl.artist.decade}}</h3>
 
- <button class="btn" ng-click='$ctrl.saveToFavorites()'>Favorite This Band</button>
+ <button class="btn" ng-click='$ctrl.saveToFavorites($ctrl.artist)'>Favorite This Band</button>

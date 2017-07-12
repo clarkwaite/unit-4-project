@@ -2,4 +2,6 @@
 <ul>
   <li ng-repeat='favorite in $ctrl.favorites'>
     <p>{{favorite}}</p>
+     <button class="btn" ng-click='$ctrl.deleteFromFavorites(favorite.id)'>Remove From Favorites</button>
   </li>
+</ul>

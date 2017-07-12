@@ -9,5 +9,8 @@
        <ul>
       <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
         <p>{{artist.name}}</p>
+        <div ng-show="artist.show">
+          <discover-artist artist="artist"></discover-artist>
+        </div>
       </li>
    </ul>

@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   def index
     @user = User.find(params[:userId])
-    @favorites = @user.favorites
+    @favorites = Artist.joins(:favorites).where(favorites: { user_id: [@user.id] })
     render json: @favorites
   end
 
@@ -15,6 +15,7 @@ class FavoritesController < ApplicationController
   end
 
   def delete
+     @user = User.find(params[:userId])
     @favorite = Favorite.find(params[:id])
     if @favorite.delete
       render json: {message: "successfully deleted favorite"}

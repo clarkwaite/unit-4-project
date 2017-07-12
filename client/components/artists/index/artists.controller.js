@@ -21,17 +21,15 @@ function ArtistsController(artistsService, $auth, $stateParams, $state) {
   }
 
   vm.goToShow = function (artist) {
-    vm.artist = {
-      name: artist.name,
-      nationality: artist.country_of_origin,
-      years_active: artist.decade,
-      genre: artist.main_genre,
-      musicgraph_id: artist.id,
-      spotify_id: artist.spotify_id
-    };
-    vm.saveArtist().then(savedArtist => {
-      $state.go('artist', { userId: $auth.user.id, artistId: savedArtist.id, artist: artist })
-    });
+    if (artist.show) {
+      artist.show = false;
+    } else {
+      artist.show = true;
+      console.log(artist);
+    }
+    // vm.saveArtist().then(savedArtist => {
+    //   $state.go('artist', { userId: $auth.user.id, artistId: savedArtist.id, artist: artist })
+    // });
   }
   vm.saveArtist = function () {
     //if searchdatabase for saved artist musicgraph_id == artist.musicgraph_id

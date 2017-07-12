@@ -2,9 +2,7 @@ ArtistController.$inject = ["artistsService", '$auth', '$state', "$stateParams",
 
 function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
   const vm = this;
-  vm.artist = {
-    artist: $stateParams.artist
-  };
+  vm.artist = null;
 
   activate(); //run when the page loads
 
@@ -12,29 +10,31 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
 
   } //close Activate function
 
-  vm.saveToFavorites = function () {
+  vm.saveToFavorites = function (artist) {
     let userId = $stateParams.userId;
-    let artistId = $stateParams.artistId;
-    artistsService.saveToFavorites(artistId, userId)
+    // let artistId = $stateParams.artistId;
+    let artistToSave = {
+      name: artist.name,
+      nationality: artist.country_of_origin,
+      years_active: artist.decade,
+      genre: artist.main_genre,
+      musicgraph_id: artist.id,
+      spotify_id: artist.spotify_id
+    };
+    artistsService.saveArtist(artistToSave)
       .then(res => {
-        vm.favorite = res.data;
-      })
-      .catch(res => {
-        console.log(res);
+        let artistId = res.id;
+        artistsService.saveToFavorites(artistId, userId)
+          .then(res => {
+            // vm.favorite = res.data;
+            console.log(res);
+          })
+          .catch(res => {
+            console.log(res);
+          });
       });
+    
   }
-
-  vm.deleteFromFavorites = function () {
-    artistsService.deleteFromFavorites(vm.favorite.id)
-      .then(res => {
-        console.log(res.data.message);
-      })
-      .catch(res => {
-        console.log('error deleting favorite');
-        console.log(res.data.error);
-      })
-  }
-
 
 } //close Controller function
 

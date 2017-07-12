@@ -61,7 +61,7 @@ function router ($stateProvider, $urlRouterProvider) {
 		})
 		.state("favorites", {
       url: "/users/:userId/favorites",
-      template: "<favorites></favorites>",
+      template: "<discover-favorites></discover-favorites>",
       resolve: {
         auth: function($auth) {
           return $auth.validateUser();
