@@ -42,5 +42,4 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
 
 } //close Controller function
 
-
 export default ArtistController;

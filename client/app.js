@@ -3,7 +3,8 @@ require("angular-ui-router");
 require("ng-token-auth");
 require("angular-cookie");
 
-angular.module("DiscoverSound", ["ui.router", "ipCookie", "ng-token-auth"])
+angular
+  .module("DiscoverSound", ["ui.router", "ipCookie", "ng-token-auth"])
   .config(router, auth);
 
 auth.$inject = ["$authProvider"];
@@ -49,7 +50,7 @@ function router($stateProvider, $urlRouterProvider) {
     .state("related", {
       url: "/users/:userId/artists/related",
       template: "<discover-related></discover-related>",
-      params: { id: null, artist: null, },
+      params: { artist: null },
       resolve: {
         auth: validateUser
       }

@@ -1,9 +1,18 @@
-const angular = require("angular");
+relatedService.$inject = ["$http", "$auth", '$stateParams'];
 
-relatedService.$inject = ["$http"];
-
-function relatedService($http) {
+function relatedService($http, $auth, $stateParams) {
 	const service = this;
+	let userId = $stateParams.userId
+
+  service.getRelatedArtists = function (artistId) {
+		console.log('making it to the service', artistId)
+    return $http.get("/users/" + userId + "/artists/" +artistId +"/related_artists")
+      .then(res => {
+        return res.data;
+      });
+  };
+
+  return service;
 }
 
 angular.module("DiscoverSound").service("relatedService", relatedService);

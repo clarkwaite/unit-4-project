@@ -1,2 +1,8 @@
 <h2>Related</h2>
-<p>{{$ctrl.artist}}</p>
+<ul>
+ <li ng-repeat="artist in $ctrl.related.data">  <!-- ng-click='$ctrl.goToShow(artist)' -->
+  <p>Name: {{artist.name}}</p>
+  <p>Similarity: {{artist.similarity}}</p>
+ </li>
+</ul>
+<discover-bubble></discover-bubble>
