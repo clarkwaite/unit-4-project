@@ -8,8 +8,11 @@
     </form>
 
     <ul>
-      <li ng-repeat="event in $ctrl.data">
+      <li ng-repeat="event in $ctrl.data" ng-click='$ctrl.goToShow(event)'>
+        <p>{{event.venue.city}}</p>
+        <div ng-show="event.show">
         <p>{{event.venue.name}}</p>
         <p>{{event.datetime}}</p>
+        </div>
       </li>
    </ul>

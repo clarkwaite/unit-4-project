@@ -19,6 +19,16 @@ function EventsController(eventsService) {
           vm.data = res;
         })
   }
+  vm.showEvent = function (event) {
+    if (event.show) {
+     event.show = false;
+    } else {
+      event.show = true;
+      console.log(event);
+    }
+}
+
+
 }
 
 export default EventsController;

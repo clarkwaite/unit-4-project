@@ -26,18 +26,6 @@ ActiveRecord::Schema.define(version: 20170711172400) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string "venue"
-    t.string "city"
-    t.string "region"
-    t.string "country"
-    t.string "date"
-    t.string "lineup", default: [], array: true
-    t.string "tickets_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "artist_id"

@@ -27,9 +27,6 @@ function ArtistsController(artistsService, $auth, $stateParams, $state) {
       artist.show = true;
       console.log(artist);
     }
-    // vm.saveArtist().then(savedArtist => {
-    //   $state.go('artist', { userId: $auth.user.id, artistId: savedArtist.id, artist: artist })
-    // });
   }
   vm.saveArtist = function () {
     //if searchdatabase for saved artist musicgraph_id == artist.musicgraph_id
