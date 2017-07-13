@@ -7,7 +7,9 @@ function eventsService($http) {
 
 
   service.searchEvent = function (eventSearched) {
-    var urlString = "http://localhost:5000/events?artist=" + eventSearched.event;
+    var encodedEvent = encodeURI(eventSearched)
+    console.log(encodedEvent)
+    var urlString = "/events?artist=" + encodedEvent;
       return $http.get(urlString).then(response => {
         return response.data;
         // var urlString = "http:/" +  window.location.host + "/events?artist=" + eventSearched.event;

@@ -4,4 +4,5 @@ class UsersController < ApplicationController
     @user = User.find(params[:userId])
     render json: @user
   end
+
 end

@@ -9,10 +9,7 @@ Rails.application.routes.draw do
   get "users/:userId", to: "users#show", as: "user_show"
   post "/favorites", to: "favorites#new", as: "new_favorites"
   get "users/:userId/artists/:artistId/related_artists", to: "related_artists#index", as: "related_artists"
+  patch "users/:userId", to: "users#edit", as: "userEdit"
   delete "users/:user_id/favorites/:artist_id", to: "favorites#destroy"
 
-  
-  # namespace :api do
-  # end
-  
 end

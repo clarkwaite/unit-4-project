@@ -7,7 +7,7 @@ function UserRegistrationController($auth, $state){
   function activate(){
   }
 
-  vm.handleRegBtnClick = function(registrationForm) {
+  vm.registrationSubmitted = function(registrationForm) {
     $auth.submitRegistration(registrationForm)
       .then(function(response) {
         // handle success response
@@ -19,6 +19,9 @@ function UserRegistrationController($auth, $state){
         // handle error response
         console.log('error with registration: ');
         console.log(response);
+        if(response.data.errors.full_messages) {
+          vm.registrationErrorMessage = response.data.errors.full_messages[0];
+        }
       });
     };
 

@@ -14,7 +14,7 @@ function artistsService($http) {
 	};
 
 	service.showArtist = function (artistShown) {
-		var showUrl = "http://localhost:5000/artists?artist=" + artistShown.artist;
+		var showUrl = "/artists?artist=" + artistShown.artist;
 		console.log("artistShown is : ", artistShown.artist);
 		return $http.get(showUrl).then(res => {
 			console.log("response is : ", res.data);

@@ -12,7 +12,7 @@ function EventsController(eventsService) {
   vm.searchEvent = function () {
 
         // the new User object will be created by binding to the form inputs
-        const eventSearched = { event: vm.event };
+        const eventSearched = vm.event;
         //add a new user
         eventsService.searchEvent(eventSearched).then(function(res){
           console.log(".then resp from controller is " , res);

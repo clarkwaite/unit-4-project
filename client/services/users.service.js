@@ -10,6 +10,11 @@ function UsersService($http, $auth) {
       });
   };
 
+  service.editUser = function (userId) {
+		console.log(userId)
+		return $http.patch('/users/:userId', userId)
+	};
+
   return service;
 }
 
