@@ -2,6 +2,7 @@
 <ul>
  <li ng-repeat="artist in $ctrl.related.data">  <!-- ng-click='$ctrl.goToShow(artist)' -->
   <p>Name: {{artist.name}}</p>
-  <p>Similarity: {{artist.similarity}}</p>
+  <p >Similarity: {{artist.similarity * 100 | number:0}}%</p>
+  <a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a>
  </li>
 </ul>
