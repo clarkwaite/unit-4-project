@@ -8,13 +8,14 @@ class EventsController < ApplicationController
   def index
     # @events = Event.all
 
-    def another_api(band)
+    def eventApi(band)
     encodedBand = URI::encode(band)
     eventSearched = 'https://rest.bandsintown.com/artists/' + encodedBand + '/events?app_id=discoversound'
     response = HTTParty.get(eventSearched)
+
     render json: response.body
     end
-    another_api(params[:artist])
+    eventApi(params[:artist])
     # puts "params are :  " + params[:artist]
   
   end
