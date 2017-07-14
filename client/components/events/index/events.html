@@ -15,7 +15,6 @@
 <div class='center'>
   <div class='event-results'>
     <ul>
-      <p ng-show='show'>Click For More Details</p>
       <li ng-repeat="event in $ctrl.data">
         <p>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} | {{event.datetime | date:'EEEE MM/dd/yyyy'}}</p>
         <div>
