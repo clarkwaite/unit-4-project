@@ -16,17 +16,18 @@
   <div class='event-results'>
     <ul>
       <li ng-repeat="event in $ctrl.data">
-        <p>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} | {{event.datetime | date:'EEEE MM/dd/yyyy'}}</p>
+        <h4>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} | {{event.datetime | date:'EEEE MM/dd/yyyy'}}</h4>
         <div>
-          <p>{{event.venue.name}}</p>
-          <p>Line Up:<span ng-repeat="artist in event.lineup">
-            | {{artist}}</p></span>
+          <h5>{{event.venue.name}}</h5>
+          <h5>Line Up:<span ng-repeat="artist in event.lineup">
+            | {{artist}}</h5></span>
             <a href={{event.offers[0].url}} target="_blank">Buy Tickets</a>
         </div>
+        <hr>
       </li>
     </ul>
     <div class='center'>
-    <button class='btn.secondary' ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+      <button class='btn.secondary' ui-sref="home({userId: $ctrl.userId})">Go Back</button>
     </div>
   </div>
 </div>
