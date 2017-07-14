@@ -1,8 +1,8 @@
-ArtistController.$inject = ["artistsService", '$auth', '$state', "$stateParams", "$http"];
+ArtistController.$inject = ["artistsService", 'eventsService', '$auth', '$state', "$stateParams", "$http"];
 
-function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
+function ArtistController(artistsService, eventsService, $auth, $state, $stateParams, $http) {
   const vm = this;
-  vm.artist = null;
+  vm.artist = $stateParams.atistId;
 
   activate(); //run when the page loads
 
@@ -21,7 +21,7 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
       musicgraph_id: artist.id,
       spotify_id: artist.spotify_id
     };
-    
+
     artistsService.saveArtist(artistToSave)
       .then(res => {
         let artistId = res.id;
@@ -34,6 +34,14 @@ function ArtistController(artistsService, $auth, $state, $stateParams, $http) {
             console.log(res);
           });
       });
+
+  //   eventsService.searchEvents(artist.name)
+  //     .then(res => {
+  //       console.log(res);
+  //     })
+  //     .catch(res => {
+  //       console.log(res);
+  //     });
   }
 
   vm.goToRelated = function (artist) {

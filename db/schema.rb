@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170713190432) do
+ActiveRecord::Schema.define(version: 20170713213936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20170713190432) do
   create_table "events", force: :cascade do |t|
     t.string "date"
     t.string "lineup", array: true
-    t.string "string", array: true
     t.string "ticket_url"
     t.string "venue_name"
     t.string "city"
@@ -37,6 +36,8 @@ ActiveRecord::Schema.define(version: 20170713190432) do
     t.string "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "artist_id"
+    t.index ["artist_id"], name: "index_events_on_artist_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -78,6 +79,7 @@ ActiveRecord::Schema.define(version: 20170713190432) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "events", "artists"
   add_foreign_key "favorites", "artists"
   add_foreign_key "favorites", "users"
 end

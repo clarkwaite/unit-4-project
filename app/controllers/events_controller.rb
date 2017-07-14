@@ -3,10 +3,8 @@ require 'net/http'
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  # GET /events
-  # GET /events.json
+  
   def index
-    # @events = Event.all
 
     def eventApi(band)
     encodedBand = URI::encode(band)
@@ -16,7 +14,6 @@ class EventsController < ApplicationController
     render json: response.body
     end
     eventApi(params[:artist])
-    # puts "params are :  " + params[:artist]
   
   end
 
@@ -71,6 +68,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:venue, :city, :region, :country, :date, :lineup, :tickets_url)
+      params.require(:event).permit(:date, :lineup, :ticket_url, :venue_name, :city, :country, :region)
     end
 end

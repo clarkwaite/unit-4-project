@@ -2,8 +2,9 @@ class FavoritesController < ApplicationController
   
   def index
     @user = User.find(params[:userId])
-    @favorites = Artist.joins(:favorites).where(favorites: { user_id: [@user.id] })
-    render json: @favorites
+    @favorites = @user.artists
+    @events = @user.events
+    render json: { favorites: @favorites, events: @events } 
   end
 
   def new

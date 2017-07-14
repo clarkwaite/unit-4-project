@@ -2,6 +2,7 @@
 class User < ActiveRecord::Base
   has_many :favorites, dependent: :destroy
   has_many :artists, through: :favorites
+  has_many :events, through: :artists
   # Include default devise modules.
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :trackable, :validatable,
