@@ -4,6 +4,7 @@ function ArtistsController(artistsService, $auth, $stateParams, $state) {
   const vm = this;
   vm.data = null;
   vm.artist = null;
+  vm.userId = $auth.user.id;
 
   activate();
 

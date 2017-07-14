@@ -13,10 +13,10 @@
     <div class="col-12 discover-description">
       <h3>Search For An Artist That You Love.</h3>
       <h3>Get Recommendations For Something Similar.</h3>
-      <button class="btn btn-secondary"><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</a></button>
+      <button class="btn-primary, button" ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</button>
     </div>
     <div class="col-12" id='jumbo-one-text'>
-      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="events({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
+      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="artists({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
       <div class="col-12, home-event">
         <span ng-repeat='event in $ctrl.events'>
           <br>
@@ -27,7 +27,7 @@
         <a href='{{event.ticket_url}}'>Find Tickets</a>
         <hr>
       </span>
-        <button class="btn btn-secondary"><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search For More Shows</a></button>
+        <button class="btn-primary, button" ui-sref="events({userId: $ctrl.currentUser.id})">Search For More Shows</button>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
 <div class="jumbotron">
   <div class="row">
     <div class="col-12" id='jumbo-bottom-image'>
-      <img src="http://i.huffpost.com/gen/2041462/images/o-MEN-LISTENING-MUSIC-facebook.jpg" class="img-fluid" id='large-home-image'>
+      <img src="https://image.freepik.com/free-photo/man-listening-to-music-with-headphones-black_1194-577.jpg" id='bottom-image' class="img-fluid">
     </div>
   </div>
 </div>

@@ -13,10 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
- button {
-  border-radius: 0 !important;
-}
  
  body {
    margin: 0;
@@ -52,11 +48,20 @@
 
    #jumbo-bottom-image {
     display: flex;
+    justify-content: right;
+    justify-content: flex-start;
+  }
+
+  #bottom-image {
+    max-height:300px;
+    max-width: 650px;
+    height: 100%;
   }
 
   #large-home-image {
     max-height: 350px;
     max-width: 750px;
+    height: auto;
   }
 
   #jumbo-one-text {
@@ -95,6 +100,12 @@
   .btn-secondary {
     margin: 5px;
   }
+
+ .button {
+   background-color: rgba(0,0,0,.8);
+   font-family: 'Audiowide', cursive;
+   color: rgba(255,255,255,.6);
+ }
 
   .home-event {
     padding:5px;
@@ -138,6 +149,7 @@
   .searchArtist {
     min-height: 50px;
     text-align: center;
+    display: flex;
   }
 
   #artist-search {
@@ -145,6 +157,7 @@
     min-width: 200px;
     height: 35px;
     width: 100%;
+    display: inline-block;
   }
 
   .artist-show {
@@ -163,6 +176,14 @@
     text-align: left;
   }
 
+   .align-related {
+    display: inline-block;
+    text-align: left;
+    ul {
+    list-style: none;
+    }
+  }
+
   .favorite-name {
   text-align: center;
   font-family: 'Audiowide', cursive;
@@ -176,4 +197,22 @@
   .delete-favorite {
     width: 200px;
     align-self: center;
+  }
+
+  .artists-results {
+    display: inline-block;
+    text-align: left;
+    
+  }
+
+  #event-input {
+    height: 30px;
+  }
+
+  .event-results {
+   display: inline-block;
+    text-align: left;
+    ul {
+    list-style: none;
+    }
   }

@@ -1,22 +1,29 @@
-<div class='container', id='artist-page'>
+<div class='container' , id='artist-page'>
 
-<h2 class='center'>Discover A New Sound</h2>
-<h3 class='center'>Or Save A Band To Your Favorites To Track Events</h3>
-<br>
-<h4 class='center'>Either Way - Start By Searching Below!</h4>
-<br>
-    <form name="searchArtist" ng-submit="$ctrl.searchArtist()">
-      <div class="searchArtist">
-        <span><input id='artist-search' type="text" ng-model="$ctrl.artist" placeholder='  Search For An Artist' required></span>
-      <span><button class="btn-secondary" type="submit" value="Search Artists">Submit</button></span>
-    </form>
-      </div>
-       <ul>
-      <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
-        <p>{{artist.name}}</p>
-        <div class='artist-show' ng-show="artist.show">
-          <discover-artist artist="artist"></discover-artist>
+  <h2 class='center'>Discover A New Sound</h2>
+  <h3 class='center'>Or Save A Band To Your Favorites To Track Events</h3>
+  <br>
+  <h4 class='center'>Either Way - Start By Searching Below!</h4>
+  <br>
+  <div class='center'>
+    <div class='artists-results'>
+      <form name="searchArtist" ng-submit="$ctrl.searchArtist()">
+        <div class="searchArtist">
+          <input id='artist-search' type="text" ng-model="$ctrl.artist" placeholder='  Search For An Artist' required>
+          <span><button class="btn-secondary" type="submit" value="Search Artists">Submit</button></span>
         </div>
-      </li>
-   </ul>
+      </form>
+      <ul>
+        <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
+          <h4>{{artist.name}}</h4>
+          <div class='artist-show' ng-show="artist.show">
+            <discover-artist artist="artist"></discover-artist>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class='center'>
+    <button class='btn.secondary' ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
+  </div>
 </div>

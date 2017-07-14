@@ -3,7 +3,7 @@ ArtistController.$inject = ["artistsService", 'eventsService', '$auth', '$state'
 function ArtistController(artistsService, eventsService, $auth, $state, $stateParams, $http) {
   const vm = this;
   vm.artist = $stateParams.artistId;
-  vm.userId = $auth.user.id
+  vm.userId = $auth.user.id;
 
   activate(); //run when the page loads
 

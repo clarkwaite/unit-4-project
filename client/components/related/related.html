@@ -1,8 +1,19 @@
-<h2>Related</h2>
-<ul>
- <li ng-repeat="artist in $ctrl.related.data">  <!-- ng-click='$ctrl.goToShow(artist)' -->
-  <p>Name: {{artist.name}}</p>
-  <p >Similarity: {{artist.similarity * 100 | number:0}}%</p>
-  <a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a>
- </li>
-</ul>
+<div class='center'>
+  <h2>Discover A New Artist!</h2>
+  <h4>These Artists Are Similar To The Artist You Searched</h4>
+  <p>If no artists show then thre may not be enough data on your artist...</p>
+  <br>
+  <button class='btn.secondary' ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
+</div>
+<div class='center'>
+  <div class='align-related'>
+    <br>
+    <ul>
+      <li ng-repeat="artist in $ctrl.related.data">
+        <h3>{{artist.name}}</h3>
+        <h5>Similarity: {{artist.similarity * 100 | number:0}}%</h5>
+        <h5><a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a></h5>
+      </li>
+    </ul>
+  </div>
+</div>
