@@ -5,7 +5,9 @@
   <form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
     <div class="form-group">
       <input type="email" placeholder="Email Address" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
+      <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched">
       <div ng-message="required">Enter Your Email Address</div>
+      </div>
     </div>
 
     <div class="form-group">
