@@ -1,16 +1,37 @@
-<div class='header-left'>
-  <h2><a ui-sref="home({userId: $ctrl.currentUser.id})">DiscoverSound</a></h2>
-  <p>Learn About Something New - And See Who's Playing Near You!</p>
-</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="home">DiscoverSound</a>
+    </div>
 
-<div ng-show="!$ctrl.currentUser.id">
-  <p><a ui-sref="signIn">Sign in</a></p>
-  <p><a ui-sref="userRegistration">Sign up</a></p>
-</div>
-<div ng-show="$ctrl.currentUser.id">
-  <p>Signed in as {{$ctrl.currentUser.email}}</p>
-  <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
-  <p><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search Artists</a></p>
-  <p><a ui-sref="events({userId: $ctrl.currentUser.id})">Search Events</a></p>
-  <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">View Favorites</a></p>
-</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="artists({userId: $ctrl.currentUser.id})">Artists</a></li>
+        <li><a ui-sref="events({userId: $ctrl.currentUser.id})">Events</a></li>
+        <li><a ui-sref="favorites({userId: $ctrl.currentUser.id})">Favorites</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Info <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a></a></li>
+            <li><a ng-click='$ctrl.signOut()'>Log Out</a></li>
+            <li><a ui-sref="signIn">Sign in</a></li>
+            <li><a ui-sref="userRegistration">Sign up</a></li>
+              <li role="separator" class="divider"></li>
+           <li><a><p>Signed In As {{$ctrl.currentUser.email}}</p></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
