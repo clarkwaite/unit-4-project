@@ -15,6 +15,7 @@ function EventsController(eventsService, $auth, $state, $stateParams, $http) {
     const eventSearched = vm.event;
     eventsService.searchEvent(eventSearched).then(function (res) {
       vm.data = res;
+      console.log(res)
     })
   }
   vm.showEvent = function (event) {
@@ -22,7 +23,6 @@ function EventsController(eventsService, $auth, $state, $stateParams, $http) {
       event.show = false;
     } else {
       event.show = true;
-      console.log(event);
     }
   }
 }

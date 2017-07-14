@@ -24,7 +24,6 @@ function artistsService($http) {
 
 	service.saveArtist = function (artist) {
 		return $http.post("/artists", artist).then(response => {
-			console.log("Coming from post", response.data)
 			return response.data;
 		});
 	};

@@ -11,6 +11,7 @@ function FavoritesController(favoritesService, $auth, $state, $stateParams){
     favoritesService.getFavorites(userId)
     .then(response => {
       vm.favorites = response;
+      console.log(vm.favorites.favorites)
     })
     .catch(response => {
       console.log('error getting favorites');

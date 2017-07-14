@@ -15,15 +15,12 @@ class ArtistsController < ApplicationController
       events = eventApi(@artist.name)
   #makes an api call of the events for the artist and saves them to the DB    
       events.each do |event|
-        if event["offers"][0]
-          url = event["offers"][0]
-        else
-          url = nil
-        end
+       
         Event.create!(
           date: event["datetime"],
           lineup: event["lineup"],
-          ticket_url: url,
+          #fix this so you can get the better URL
+          ticket_url: event["url"],
           venue_name: event["venue"]["name"],
           city: event["venue"]["city"],
           country: event["venue"]["country"],

@@ -1,7 +1,11 @@
 <h2>Favorites</h2>
 <ul>
-  <li ng-repeat='favorite in $ctrl.favorites'>
-    <p>{{favorite}}</p>
+  <li ng-repeat='favorite in $ctrl.favorites.favorites'>
+    <p>{{favorite.name}}</p>
+    <p>{{favorite.genre}}</p>
+    <p>{{favorite.nationality}}</p>
+    <p>{{favorite.years_active}}</p>
+    <p><a href='https://open.spotify.com/artist/{{favorite.spotify_id}}' target="_blank">Explore Artist</a></p>
      <button class="btn" ng-click='$ctrl.deleteFromFavorites(favorite.id)'>Remove From Favorites</button>
   </li>
 </ul>
