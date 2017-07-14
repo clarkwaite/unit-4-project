@@ -13,9 +13,92 @@
  *= require_tree .
  *= require_self
  */
+
+ button {
+  border-radius: 0 !important;
+}
+ 
+ body {
+   margin: 0;
+ }
 .center {
   text-align: center;
 }
 .navbar-brand {
   font-family: 'Audiowide', cursive;
 }
+.navbar {
+  margin: 0;
+}
+.jumbotron {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: center top;
+  background-position: center bottom;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  }
+
+  #jumbo-top-image {
+    display: flex;
+    justify-content: right;
+    justify-content: flex-end;
+  
+  }
+
+   #jumbo-bottom-image {
+    display: flex;
+  }
+
+  #large-home-image {
+    max-height: 350px;
+    max-width: 750px;
+  }
+
+  #jumbo-one-text {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+  }
+
+  .row {
+    margin: 0px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  #discover-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+    color: rgba(150,150,150,1);
+    text-shadow: 2px 2px black;
+    }
+  }
+
+  .discover-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-align: center;
+  }
+
+  .btn-secondary {
+    margin: 5px;
+  }
+
+  .home-event {
+    padding:5px;
+    margin: 5px;
+    p {
+      margin-top: 3px;
+    }
+  }

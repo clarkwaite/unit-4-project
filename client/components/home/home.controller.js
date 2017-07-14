@@ -3,6 +3,7 @@ HomeController.$inject = ["homeService", "favoritesService", "$auth", '$statePar
 function HomeController(homeService, favoritesService, $auth, $stateParams, $state, $http) {
   const vm = this;
   vm.user = $auth.user.id;
+  vm.currentUser = $auth.user
   vm.userStates = $auth.user.states;
   vm.events = [];
   vm.favorites = null;

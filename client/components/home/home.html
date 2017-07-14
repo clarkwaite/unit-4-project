@@ -1,24 +1,44 @@
-<h2>Welcome To DiscoverSound</h2>
-
-
-<div class="container">
+<div class="jumbotron">
   <div class="row">
-    <div class="col">
-      <h3>Discover New Artists</h3>
+    <div class="col-12" id='jumbo-top-image'>
+      <img src="http://www.giveasyoulive.com/blog/wp-content/uploads/2014/07/listening-to-music-711x300.jpg" class="img-fluid">
     </div>
-    <div class="col-6">
-      <h3>Events Near You</h3>
-      <span ng-repeat='event in $ctrl.events'>
-        <p>{{event.lineup[0]}} - {{event.date | date:'EEEE MM/dd/yyyy'}}</p>
-        <p>{{event.venue_name}} - {{event.city}}, {{event.region}} - {{event.country}}</p>
+    <div class="col-12" id='jumbo-one-text'>
+      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="artists({userId: $ctrl.currentUser.id})">Discover New Artists</a></h3>
+    </div>
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-12 discover-description">
+      <h3>Search For An Artist That You Love.</h3>
+      <h3>Get Recommendations For Something Similar.</h3>
+      <button class="btn btn-secondary"><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</a></button>
+    </div>
+    <div class="col-12" id='jumbo-one-text'>
+      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="events({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
+      <div class="col-12, home-event">
+        <span ng-repeat='event in $ctrl.events'>
+          <br>
+        <h3>{{event.lineup[0]}}</h3>
+        <p>{{event.date | date:'EEEE MM/dd/yyyy'}}</p>
+        <p>{{event.venue_name}}</p> 
+        <p>{{event.city}}, {{event.region}} - {{event.country}}</p>
         <a href='{{event.ticket_url}}'>Find Tickets</a>
+        <hr>
       </span>
+        <button class="btn btn-secondary"><a ui-sref="artists({userId: $ctrl.currentUser.id})">Search For More Shows</a></button>
+      </div>
     </div>
-    <div class="col">
-      <h3>Your Favorites</h3>
-        <span ng-repeat='favorite in $ctrl.favorites'>
-          <p>Name: {{favorite.name}}</p>
-        </span>
+  </div>
+</div>
+<div class="col-12" id='jumbo-one-text'>
+  <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'></h3>
+</div>
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-12" id='jumbo-bottom-image'>
+      <img src="http://i.huffpost.com/gen/2041462/images/o-MEN-LISTENING-MUSIC-facebook.jpg" class="img-fluid" id='large-home-image'>
     </div>
   </div>
 </div>
