@@ -12,9 +12,9 @@
     <p ng-click=event.id=!event.id>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} | {{event.datetime | date:'EEEE MM/dd/yyyy'}}</p>
     <div ng-hide=event.id>
       <p>{{event.venue.name}}</p>
-      Line Up:<span ng-repeat="artist in event.lineup">
-       | {{artist}}
-      </span><br><br>
+      <p>Line Up:<span ng-repeat="artist in event.lineup">
+       | {{artist}}</p>
+      </span>
       <a href={{event.offers[0].url}} target="_blank">Buy Tickets</a>
     </div>
   </li>
