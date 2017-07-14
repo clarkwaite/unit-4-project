@@ -1,16 +1,22 @@
-<h2>Artists</h2>
+<div class='container', id='artist-page'>
 
+<h2 class='center'>Discover A New Sound</h2>
+<h3 class='center'>Or Save A Band To Your Favorites To Track Events</h3>
+<br>
+<h4 class='center'>Either Way - Start By Searching Below!</h4>
+<br>
     <form name="searchArtist" ng-submit="$ctrl.searchArtist()">
       <div class="searchArtist">
-        <div>Search Artists:<input type="text" ng-model="$ctrl.artist" required></div>
-      </div>
-      <button class="btn" type="submit" value="Search Artists">Submit</button>
+        <span><input id='artist-search' type="text" ng-model="$ctrl.artist" placeholder='  Search For An Artist' required></span>
+      <span><button class="btn-secondary" type="submit" value="Search Artists">Submit</button></span>
     </form>
+      </div>
        <ul>
       <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
         <p>{{artist.name}}</p>
-        <div ng-show="artist.show">
+        <div class='artist-show' ng-show="artist.show">
           <discover-artist artist="artist"></discover-artist>
         </div>
       </li>
    </ul>
+</div>

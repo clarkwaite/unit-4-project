@@ -2,7 +2,8 @@ ArtistController.$inject = ["artistsService", 'eventsService', '$auth', '$state'
 
 function ArtistController(artistsService, eventsService, $auth, $state, $stateParams, $http) {
   const vm = this;
-  vm.artist = $stateParams.atistId;
+  vm.artist = $stateParams.artistId;
+  vm.userId = $auth.user.id
 
   activate(); //run when the page loads
 
@@ -27,11 +28,9 @@ function ArtistController(artistsService, eventsService, $auth, $state, $statePa
         let artistId = res.id;
         artistsService.saveToFavorites(artistId, userId)
           .then(res => {
-            // vm.favorite = res.data;
-            console.log(res);
+            $state.go('favorites', { userId: vm.userId })
           })
           .catch(res => {
-            console.log(res);
           });
       });
 

@@ -1,22 +1,22 @@
-<h4>Log In</h4>
-
-<div class="error" ng-show="$ctrl.loginErrorMessage">{{$ctrl.loginErrorMessage}}</div>
-<form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
-    <div ng-message="required">Enter Your Email Address</div>
-  </div>
-  </div>
-
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" ng-model="loginForm.password" required="required" class="form-control"
-      ng-minlength="8">
-    <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched">
-      <div ng-message="minlength">Password should be at least 8 characters</div>
+<div class='container' id='sign-in-div'>
+  <h2>User Sign In</h2>
+  <br>
+  <div class="error" ng-show="$ctrl.loginErrorMessage">{{$ctrl.loginErrorMessage}}</div>
+  <form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
+    <div class="form-group">
+      <input type="email" placeholder="Email Address" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
+      <div ng-message="required">Enter Your Email Address</div>
     </div>
-  </div>
 
-  <button type="submit" ng-disabled="login.email.$invalid">Sign in</button>
-</form>
+    <div class="form-group">
+      <input type="password" placeholder="Password" name="password" id="password" ng-model="loginForm.password" required="required"
+        class="form-control" ng-minlength="8">
+      <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched">
+        <div ng-message="minlength">Password should be at least 8 characters</div>
+      </div>
+    </div>
+
+    <button type="submit" class='btn.secondary' ng-disabled="login.email.$invalid">Sign in</button>
+  </form>
+
+</div>

@@ -24,6 +24,7 @@
 .center {
   text-align: center;
 }
+
 .navbar-brand {
   font-family: 'Audiowide', cursive;
 }
@@ -101,4 +102,78 @@
     p {
       margin-top: 3px;
     }
+  }
+
+  #footer {
+    text-align: center;
+  }
+
+  .footer {
+    margin: 0 auto;
+    font-family: 'Audiowide', cursive;
+    font-size: 14px;
+  }
+
+  .error-messages {
+    font-weight: 700;
+    color: rgba(225, 25, 25, .8)
+  }
+
+  #sign-up-div {
+    text-align: center;
+    max-width: 450px;
+    margin-top: 15px;
+  }
+
+  #sign-in-div {
+    text-align: center;
+    max-width: 450px;
+    margin-top: 25px;
+  }
+
+  #states {
+    margin: 15px 0px;
+  }
+
+  .searchArtist {
+    min-height: 50px;
+    text-align: center;
+  }
+
+  #artist-search {
+    max-width: 500px;
+    min-width: 200px;
+    height: 35px;
+    width: 100%;
+  }
+
+  .artist-show {
+    margin: 25px;
+  }
+
+  .favorite-show {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .align-favorites {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .favorite-name {
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+
+  }
+
+  .favorite-list {
+    list-style: none;
+  }
+
+  .delete-favorite {
+    width: 200px;
+    align-self: center;
   }
