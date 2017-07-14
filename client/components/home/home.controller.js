@@ -20,10 +20,6 @@ function HomeController(homeService, favoritesService, $auth, $stateParams, $sta
             vm.events.push(event)
           }
         })
-        console.log(vm.events)
-        console.log(vm.favorites)
-        // console.log([res.data.events.city])
-        // return [res.data.events, res.data.favorites];  
       });
   }
 

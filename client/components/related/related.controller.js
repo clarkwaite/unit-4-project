@@ -3,7 +3,6 @@ function RelatedController(relatedService, $auth, $state, $stateParams){
   const vm = this;
   vm.artistId = $stateParams.artist.id;
   vm.userId = $auth.user.id;
-  console.log(vm.artistId)
   vm.related = null
   
   //run when the page loads

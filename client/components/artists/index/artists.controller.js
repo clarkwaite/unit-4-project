@@ -26,7 +26,6 @@ function ArtistsController(artistsService, $auth, $stateParams, $state) {
       artist.show = false;
     } else {
       artist.show = true;
-      console.log(artist);
     }
   }
   vm.saveArtist = function () {

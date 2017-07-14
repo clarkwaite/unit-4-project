@@ -6,10 +6,11 @@ function HeaderController($auth, $state) {
 
   function activate() {
 
-    if (vm.currentUser.id !== undefined) {
-      $state.go('home')
-    } else {
+    
+    if (vm.currentUser.id === undefined) {
       $state.go('signIn')
+    } else {
+      $state.go('home')
   }
 }
 

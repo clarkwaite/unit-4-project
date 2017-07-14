@@ -15,7 +15,6 @@ function User_ShowController(UsersService, $state, $stateParams){
     })
     .catch(response => {
       console.log('error getting user');
-      console.log(response);
     })
   }
 

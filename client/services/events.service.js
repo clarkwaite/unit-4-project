@@ -8,11 +8,9 @@ function eventsService($http) {
 
   service.searchEvent = function (eventSearched) {
     var encodedEvent = encodeURI(eventSearched)
-    console.log(encodedEvent)
     var urlString = "/events?artist=" + encodedEvent;
       return $http.get(urlString).then(response => {
         return response.data;
-          console.log(response.data)
       });
     };
 };
