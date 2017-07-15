@@ -13,13 +13,13 @@
     <div class="col-12 discover-description">
       <h3>Search For An Artist That You Love.</h3>
       <h3>Get Recommendations For Something Similar.</h3>
-      <button class="btn-primary, button" ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</button>
+      <br>
+      <button type="button" class="btn btn-outline-secondary"  ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</button>
     </div>
-    <div class="col-12" id='jumbo-one-text'>
+    <div class="col-12, center">
       <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="artists({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
       <div class="col-12, home-event">
-        <span ng-repeat='event in $ctrl.events'>
-          <br>
+        <span class='jumbo-one-text' ng-repeat='event in $ctrl.events'>
         <h3>{{event.lineup[0]}}</h3>
         <p>{{event.date | date:'EEEE MM/dd/yyyy'}}</p>
         <p>{{event.venue_name}}</p> 
@@ -27,18 +27,18 @@
         <a href='{{event.ticket_url}}'>Find Tickets</a>
         <hr>
       </span>
-        <button class="btn-primary, button" ui-sref="events({userId: $ctrl.currentUser.id})">Search For More Shows</button>
+        <button type="button" class="btn btn-outline-secondary" ui-sref="events({userId: $ctrl.currentUser.id})">Search For More Shows</button>
       </div>
     </div>
   </div>
 </div>
-<div class="col-12" id='jumbo-one-text'>
+<div class="col-12" class='jumbo-one-text'>
   <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'></h3>
 </div>
 <div class="jumbotron">
   <div class="row">
     <div class="col-12" id='jumbo-bottom-image'>
-      <img src="https://image.freepik.com/free-photo/man-listening-to-music-with-headphones-black_1194-577.jpg" id='bottom-image' class="img-fluid">
+      <img src="http://i.imgur.com/T5sPYnZ.jpg?2" id='bottom-image' class="img-fluid">
     </div>
   </div>
 </div>

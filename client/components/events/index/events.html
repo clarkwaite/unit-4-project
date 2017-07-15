@@ -5,7 +5,7 @@
 
   <form name="searchEvent" ng-submit="$ctrl.searchEvent()">
     <div><input type="text" placeholder="   Enter A Band's Name" id='event-input' ng-model="$ctrl.event" required>
-      <span><button class="btn.secondary" type="submit" value="Search Event" ng-click='show=true'>Submit</button></span>
+      <span><button class="btn btn-outline-secondary"  type="submit" value="Search Event" ng-click='show=true'>Submit</button></span>
       <br>
       <br>
       <p>If no results appear then the band probably isn't on tour!</p>
@@ -27,7 +27,9 @@
       </li>
     </ul>
     <div class='center'>
-      <button class='btn.secondary' ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+      <button type="button" class="btn btn-outline-secondary" ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+      <br>
+      <br>
     </div>
   </div>
 </div>

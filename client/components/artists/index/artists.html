@@ -10,12 +10,12 @@
       <form name="searchArtist" ng-submit="$ctrl.searchArtist()">
         <div class="searchArtist">
           <input id='artist-search' type="text" ng-model="$ctrl.artist" placeholder='  Search For An Artist' required>
-          <span><button class="btn-secondary" type="submit" value="Search Artists">Submit</button></span>
+          <span><button class="btn btn-outline-secondary" id="artist-submit" type="submit" value="Search Artists">Submit</button></span>
         </div>
       </form>
       <ul>
         <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
-          <h4>{{artist.name}}</h4>
+          <h3>{{artist.name}}</h3>
           <div class='artist-show' ng-show="artist.show">
             <discover-artist artist="artist"></discover-artist>
           </div>
@@ -24,6 +24,8 @@
     </div>
   </div>
   <div class='center'>
-    <button class='btn.secondary' ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+   <button type="button" class="btn btn-outline-secondary" ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+    <br>
+    <br>
   </div>
 </div>

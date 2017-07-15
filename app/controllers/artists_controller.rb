@@ -14,6 +14,9 @@ class ArtistsController < ApplicationController
     if @artist.save
       events = eventApi(@artist.name)
   #makes an api call of the events for the artist and saves them to the DB    
+
+  #{"errors":["Unknown Artist"]}
+
       events.each do |event|
        
         Event.create!(

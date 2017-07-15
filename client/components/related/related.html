@@ -3,7 +3,7 @@
   <h4>These Artists Are Similar To The Artist You Searched</h4>
   <p>If no artists show then there may not be enough data on your artist...</p>
   <br>
-  <button class='btn.secondary' ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
+  <button type="button" class="btn btn-outline-secondary"  ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
 </div>
 <div class='center'>
   <div class='align-related'>
@@ -13,6 +13,7 @@
         <h3>{{artist.name}}</h3>
         <h5>Similarity: {{artist.similarity * 100 | number:0}}%</h5>
         <h5><a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a></h5>
+        <hr>
       </li>
     </ul>
   </div>
