@@ -8,9 +8,13 @@ Languages and frameworks used to create this app are AngularJS, SQL using Active
 
 Also utilized were:
 
+
 Devise-token-auth/ng-token-auth for user login
+
 Omniauth
+
 Sass
+
 HTTParty for Api Calls
 
 ## App Objective:
