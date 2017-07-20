@@ -12,7 +12,7 @@
       <div class="form-group">
         <div class="col-sm-12">
           <select class="form-control" id="states" name="states" ng-model="registrationForm.states" required="required">
-        <option value="">Home State (Or State For Event Suggestions)</option>
+        <option value="">* Home State (Or State For Event Suggestions)</option>
         <option value="AK">Alaska</option>
         <option value="AL">Alabama</option>
         <option value="AR">Arkansas</option>
@@ -66,34 +66,32 @@
         <option value="WV">West Virginia</option>
         <option value="WY">Wyoming</option>
     </select>
-          <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$touched">
-            <div ng-message="required">Enter The State That You Want For Event Info</div>
+          <div class="error-messages" ng-messages="registration.password.$error">
           </div>
         </div>
       </div>
 
       <div class="form-group">
-        <input type="email" placeholder="Email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
-        <div class="error-messages" ng-messages="registration.email.$error" ng-show="registration.email.$touched">
+        <input type="email" placeholder="* Email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
+        <div class="error-messages" ng-messages="registration.email.$error" ng-show="registration.email.$invalid && registration.email.$touched">
           <div ng-message="required">Enter An Email Address</div>
           <div ng-message="email">Must Enter A Valid Email (email@email.com)</div>
         </div>
       </div>
 
       <div class="form-group">
-        <input type="password" name="password" ng-model="registrationForm.password" placeholder="Password" required="required" ng-minlength="8"
+        <input type="password" name="password" ng-model="registrationForm.password" placeholder="* Password" required="required" ng-minlength="8"
           class="form-control">
-        <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$touched">
+        <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$invalid && registration.password.$touched">
           <div ng-message="required">Enter Your Password</div>
           <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
         </div>
       </div>
 
       <div class="form-group">
-        <input type="password" name="password_confirmation" placeholder="Re-Enter Password" ng-model="registrationForm.password_confirmation"
+        <input type="password" name="password_confirmation" placeholder="* Re-Enter Password" ng-model="registrationForm.password_confirmation"
           required="required" ng-minlength="8" class="form-control">
-        <div class="error-messages" ng-messages="registration.password_confirmation.$error" ng-show="registration.password_confirmation.$touched">
-          <div ng-message="required">Enter Your Password Again</div>
+        <div class="error-messages" ng-messages="registration.password_confirmation.$error" ng-show="registration.password_confirmation.$invalid && registration.password_confirmation.$touched">
           <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
         </div>
       </div>

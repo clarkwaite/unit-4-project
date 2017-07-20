@@ -5,7 +5,7 @@
   <form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
     <div class="form-group">
       <input type="email" placeholder="Email Address" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
-      <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched">
+      <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched && login.email.$invalid">
         <div ng-message="required">Enter Your Email Address</div>
       </div>
     </div>
@@ -13,7 +13,7 @@
     <div class="form-group">
       <input type="password" placeholder="Password" name="password" id="password" ng-model="loginForm.password" required="required"
         class="form-control" ng-minlength="8">
-      <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched">
+      <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched && login.password.$invalid">
         <div ng-message="minlength">Password should be at least 8 characters</div>
       </div>
     </div>
