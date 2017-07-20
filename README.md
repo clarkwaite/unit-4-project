@@ -2,7 +2,7 @@
 
 [![homescreen](http://i.imgur.com/jusMzNE.png "DiscoverSound Home") ](http://discoversound.herokuapp.com)
 
-### An Angular/Rails application untilizing the Bandsintown and MusicGraph apis to search and favorites musicians and find tour dates and local concerts.
+### An Angular/Rails application utilizing the Bandsintown and MusicGraph apis to search and favorites musicians and find tour dates and local concerts.
 
 Languages and frameworks used to create this app are AngularJS, SQL using ActiveRecord, CSS (Bootstrap) Express, and Node
 
