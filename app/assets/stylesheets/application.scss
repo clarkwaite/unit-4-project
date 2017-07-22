@@ -224,9 +224,15 @@ body {
   #sign-in-image {
     align-self: center;
   }
+  #sign-up-image {
+    align-self: center;
+  }
   @media (max-width: 575px) {
     #discover-bar a{
       font-size: 8.5px;
+    }
+    #sign-in-div h2{
+      font-size: 24px;
     }
 
   }
