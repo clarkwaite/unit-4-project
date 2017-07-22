@@ -1,4 +1,3 @@
-
 <div class='container' id='sign-up-div'>
 
   <h3>Welcome To DiscoverSound!</h3>
@@ -12,7 +11,7 @@
       <div class="form-group">
         <div class="col-sm-12">
           <select class="form-control" id="states" name="states" ng-model="registrationForm.states" required="required">
-        <option value="">* Home State (Or State For Event Suggestions)</option>
+        <option value="">* Home State (For Event Suggestions)</option>
         <option value="AK">Alaska</option>
         <option value="AL">Alabama</option>
         <option value="AR">Arkansas</option>
@@ -80,8 +79,8 @@
       </div>
 
       <div class="form-group">
-        <input type="password" name="password" ng-model="registrationForm.password" placeholder="* Password" required="required" ng-minlength="8"
-          class="form-control">
+        <input type="password" name="password" ng-model="registrationForm.password" placeholder="* Password" required="required"
+          ng-minlength="8" class="form-control">
         <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$invalid && registration.password.$touched">
           <div ng-message="required">Enter Your Password</div>
           <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
@@ -98,6 +97,14 @@
 
       <button type="submit" class="btn btn-outline-secondary" ng-disabled="registration.$invalid">Submit Registration</button>
   </form>
-
+  <br>
+  <a ui-sref='signIn'>Already A User?</a>
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="row">
+    <div class='center' id='sign-up-image'>
+      <img src="http://i.imgur.com/qFBWYr9.jpg?2" id='sign-up-image' >
+    </div>
   </div>
 </div>

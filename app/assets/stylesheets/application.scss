@@ -14,13 +14,20 @@
  *= require_self
  */
  
- body {
-   margin: 0;
- }
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
 .center {
   text-align: center;
 }
-
 .navbar-brand {
   font-family: 'Audiowide', cursive;
   font-weight: 700;
@@ -40,46 +47,38 @@
   padding: 0;
   margin: 0;
   }
-
   #jumbo-top-image {
     display: flex;
     justify-content: right;
     justify-content: flex-end;
   
   }
-
    #jumbo-bottom-image {
     display: flex;
     justify-content: right;
     justify-content: flex-start;
   }
-
   #bottom-image {
     max-height:400px;
     max-width: 750px;
     height: 100%;
   }
-
   #large-home-image {
     max-height: 350px;
     max-width: 750px;
     height: auto;
   }
-
   .jumbo-one-text {
     margin: 0 auto;
     text-align: center;
     font-family: 'Audiowide', cursive;
   }
-
   .row {
     margin: 0px;
   }
-
   .flex {
     display: flex;
   }
-
   #discover-bar {
     display: flex;
     justify-content: center;
@@ -89,7 +88,6 @@
     text-shadow: 2px 2px black;
     }
   }
-
   .discover-description {
     display: flex;
     flex-direction: column;
@@ -98,17 +96,14 @@
     min-height: 200px;
     text-align: center;
   }
-
   .btn-secondary {
     margin: 5px;
   }
-
  .button {
    background-color: rgba(0,0,0,.8);
    font-family: 'Audiowide', cursive;
    color: rgba(255,255,255,.6);
  }
-
   .home-event {
     padding:5px;
     margin: 5px;
@@ -116,44 +111,38 @@
       margin-top: 3px;
     }
   }
-
   #footer {
     text-align: center;
   }
-
   .footer {
     margin: 0 auto;
     font-family: 'Audiowide', cursive;
     font-size: 14px;
   }
-
   .error-messages {
     font-weight: 700;
     color: rgba(225, 25, 25, .8)
   }
-
   #sign-up-div {
     text-align: center;
+    align-self: center;
     max-width: 450px;
     margin-top: 15px;
   }
-
   #sign-in-div {
+    align-self: center;
     text-align: center;
     max-width: 450px;
     margin-top: 25px;
+    flex: 1 0 auto;
   }
-
-  #states {
-    margin: 15px 0px;
+  #states {    margin: 15px 0px;
   }
-
   .searchArtist {
     min-height: 50px;
     text-align: center;
     display: flex;
   }
-
   #artist-search {
     max-width: 500px;
     min-width: 200px;
@@ -161,23 +150,19 @@
     width: 100%;
     display: inline-block;
   }
-
   .artist-show {
     margin: 25px;
   }
-
   .favorite-show {
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
   }
-
   .align-favorites {
     display: inline-block;
     text-align: left;
   }
-
    .align-related {
     display: inline-block;
     text-align: left;
@@ -185,32 +170,24 @@
     list-style: none;
     }
   }
-
   .favorite-name {
   text-align: center;
   font-family: 'Audiowide', cursive;
-
   }
-
   .favorite-list {
     list-style: none;
   }
-
   .delete-favorite {
     width: 200px;
     align-self: center;
   }
-
   .artists-results {
     display: inline-block;
-    text-align: left;
-    
+    text-align: left;  
   }
-
   #event-input {
     height: 30px;
   }
-
   .event-results {
    display: inline-block;
     text-align: left;
@@ -218,11 +195,9 @@
     list-style: none;
     }
   }
-
   .sign-in-buttons {
     margin: 5px; 
   }
-
   hr {
     display: block;
     height: 1px;
@@ -238,8 +213,20 @@
     font-family: 'Audiowide', cursive;
     padding: 5px;
   }
-
   #artist-submit {
     margin-left: 5px;
     margin-top: 2px;
+  }
+  .container {
+  display: flex;
+  flex-direction: column;
+}
+  #sign-in-image {
+    align-self: center;
+  }
+  @media (max-width: 575px) {
+    #discover-bar a{
+      font-size: 8.5px;
+    }
+
   }

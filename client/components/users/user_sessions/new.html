@@ -1,25 +1,37 @@
-<div class='container' id='sign-in-div'>
-  <h2>User Sign In</h2>
-  <br>
-  <div class="error" ng-show="$ctrl.loginErrorMessage">{{$ctrl.loginErrorMessage}}</div>
-  <form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
-    <div class="form-group">
-      <input type="email" placeholder="Email Address" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
-      <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched && login.email.$invalid">
-        <div ng-message="required">Enter Your Email Address</div>
+<div class='container'>
+  <div id='sign-in-div'>
+    <h2>Welcome to DiscoverSound</h2>
+    <h4>Favorite Artists You Love</h4>
+    <h4>Find Similar Artists</h4>
+    <h4>See Who's Coming To Town</h4>
+    <br>
+    <div class="error" ng-show="$ctrl.loginErrorMessage">{{$ctrl.loginErrorMessage}}</div>
+    <form ng-submit="$ctrl.userLogin(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
+      <div class="form-group">
+        <input type="email" placeholder="Email Address" name="email" id="email" ng-model="loginForm.email" required="required" class="form-control">
+        <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched && login.email.$invalid">
+          <div ng-message="required">Enter Your Email Address</div>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <input type="password" placeholder="Password" name="password" id="password" ng-model="loginForm.password" required="required"
-        class="form-control" ng-minlength="8">
-      <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched && login.password.$invalid">
-        <div ng-message="minlength">Password should be at least 8 characters</div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" name="password" id="password" ng-model="loginForm.password" required="required"
+          class="form-control" ng-minlength="8">
+        <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched && login.password.$invalid">
+          <div ng-message="minlength">Password should be at least 8 characters</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-secondary" ng-disabled="login.email.$invalid">Sign in</button>
+    </form>
+    <div class='sign-in-buttons'>
+      <a ui-sref='userRegistration'>Not A User?</a>
+    </div>
+  </div>
+  <div class="jumbotron" id='sign-in-image'>
+    <div class="row">
+      <div class='center'>
+        <img src="http://i.imgur.com/9ERupI8.jpg?3" class='sign-in-image'>
       </div>
     </div>
-       <button type="submit" class="btn btn-outline-secondary"  ng-disabled="login.email.$invalid">Sign in</button>
-  </form>
-    <div class='sign-in-buttons'>
-  <a ui-sref='userRegistration'>Not A User?</a>
   </div>
 </div>
