@@ -1,17 +1,17 @@
 <div class='container'>
   <div id='sign-up-div'>
 
-  <h3>Welcome!</h3>
-  <p>Please Sign Up Below</p>
+    <h3>Welcome!</h3>
+    <p>Please Sign Up Below</p>
 
-  <div class="error" ng-show="$ctrl.registrationErrorMessage">{{$ctrl.registrationErrorMessage}}</div>
+    <div class="error" ng-show="$ctrl.registrationErrorMessage">{{$ctrl.registrationErrorMessage}}</div>
 
-  <form ng-submit="$ctrl.registrationSubmitted(registrationForm)" role="form" ng-init="registrationForm = {}" name="registration"
-    novalidate>
-    <div class="form-group">
+    <form ng-submit="$ctrl.registrationSubmitted(registrationForm)" role="form" ng-init="registrationForm = {}" name="registration"
+      novalidate>
       <div class="form-group">
-        <div class="col-sm-12">
-          <select class="form-control" id="states" name="states" ng-model="registrationForm.states" required="required">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <select class="form-control" id="states" name="states" ng-model="registrationForm.states" required="required">
         <option value="">* Home State (For Event Suggestions)</option>
         <option value="AK">Alaska</option>
         <option value="AL">Alabama</option>
@@ -66,47 +66,47 @@
         <option value="WV">West Virginia</option>
         <option value="WY">Wyoming</option>
     </select>
-          <div class="error-messages" ng-messages="registration.password.$error">
+            <div class="error-messages" ng-messages="registration.password.$error">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <input type="email" placeholder="* Email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
-        <div class="error-messages" ng-messages="registration.email.$error" ng-show="registration.email.$invalid && registration.email.$touched">
-          <div ng-message="required">Enter An Email Address</div>
-          <div ng-message="email">Must Enter A Valid Email (email@email.com)</div>
+        <div class="form-group">
+          <input type="email" placeholder="* Email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
+          <div class="error-messages" ng-messages="registration.email.$error" ng-show="registration.email.$invalid && registration.email.$touched">
+            <div ng-message="required">Enter An Email Address</div>
+            <div ng-message="email">Must Enter A Valid Email (email@email.com)</div>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <input type="password" name="password" ng-model="registrationForm.password" placeholder="* Password" required="required"
-          ng-minlength="8" class="form-control">
-        <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$invalid && registration.password.$touched">
-          <div ng-message="required">Enter Your Password</div>
-          <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
+        <div class="form-group">
+          <input type="password" name="password" ng-model="registrationForm.password" placeholder="* Password" required="required"
+            ng-minlength="8" class="form-control">
+          <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$invalid && registration.password.$touched">
+            <div ng-message="required">Enter Your Password</div>
+            <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <input type="password" name="password_confirmation" placeholder="* Re-Enter Password" ng-model="registrationForm.password_confirmation"
-          required="required" ng-minlength="8" class="form-control">
-        <div class="error-messages" ng-messages="registration.password_confirmation.$error" ng-show="registration.password_confirmation.$invalid && registration.password_confirmation.$touched">
-          <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
+        <div class="form-group">
+          <input type="password" name="password_confirmation" placeholder="* Re-Enter Password" ng-model="registrationForm.password_confirmation"
+            required="required" ng-minlength="8" class="form-control">
+          <div class="error-messages" ng-messages="registration.password_confirmation.$error" ng-show="registration.password_confirmation.$invalid && registration.password_confirmation.$touched">
+            <div ng-message="minlength">Password Should Be At Least 8 Characters</div>
+          </div>
         </div>
-      </div>
 
-      <button type="submit" class="btn btn-outline-secondary" ng-disabled="registration.$invalid">Submit Registration</button>
-  </form>
-  <br>
-  <a ui-sref='signIn'>Already A User?</a>
-  </div>
-</div>
-<div class="jumbotron" id='sign-up-image'>
-  <div class="row">
-    <div class='center'>
-      <img src="http://i.imgur.com/qFBWYr9.jpg?3" class='img-responsive'>
+        <button type="submit" class="btn btn-outline-secondary" ng-disabled="registration.$invalid">Submit Registration</button>
+    </form>
+    <br>
+    <a ui-sref='signIn'>Already A User?</a>
     </div>
   </div>
-</div>
+  <div class="jumbotron" id='sign-up-image'>
+    <div class="row">
+      <div class='center'>
+        <img src="http://i.imgur.com/qFBWYr9.jpg?3" class='img-responsive'>
+      </div>
+    </div>
+  </div>
 </div>
