@@ -11,7 +11,7 @@ function UserSessionsController($auth, $state) {
       if (user.id !== undefined) {
         $state.go('home', { userId: user.id });
       }
-    }, 250);
+    }, 500);
   }
   vm.userLogin = function (loginForm) {
     $auth.submitLogin(loginForm)
