@@ -11,8 +11,8 @@ function UserRegistrationController($auth, $state){
     $auth.submitRegistration(registrationForm)
       .then(function(response) {
         // handle success response
-        console.log('successful registration: ');
-        $state.go('home', { userId: response.data.id });
+        console.log('successful registration');
+        $state.go('home', { userId: response.data.data.id });
       })
       .catch(function(response) {
         // handle error response
