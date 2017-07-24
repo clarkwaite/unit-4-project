@@ -12,7 +12,7 @@ function UserRegistrationController($auth, $state){
       .then(function(response) {
         // handle success response
         console.log('successful registration: ');
-        $state.go('home');
+        $state.go('home', { userId: response.data.id });
       })
       .catch(function(response) {
         // handle error response

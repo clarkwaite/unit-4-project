@@ -13,7 +13,7 @@ function UserSessionsController($auth, $state) {
         // handle success response
         vm.current_user_id = response.id;
         console.log('successful login');
-        $state.go('home');
+        $state.go('home', { userId: vm.current_user_id });
       })
       .catch(function (response) {
         // handle error response

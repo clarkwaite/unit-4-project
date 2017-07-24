@@ -10,7 +10,7 @@ angular
 auth.$inject = ["$authProvider"];
 function auth($authProvider) {
   $authProvider.configure({
-    apiUrl: '/',
+    apiUrl: '/sign_in',
     validateOnPageLoad: false
   });
 }
@@ -26,14 +26,15 @@ function router($stateProvider, $urlRouterProvider) {
       template: "<user-registration></user-registration>"
     })
     .state("home", {
-      url: "/",
+      url: "/users/:userId",
       template: "<discover-home></discover-home>",
+      params: { userId: null, artist: null },
        resolve: {
         auth: validateUser
       }
     })
     .state("userShow", {
-      url: "/users/:userId",
+      url: "/users/:userId/edit",
       template: "<user-show></user-show>",
       resolve: {
         auth: validateUser
@@ -77,7 +78,7 @@ function router($stateProvider, $urlRouterProvider) {
       }
     })
 
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/sign_in");
 }
 
 validateUser.$inject = ["$auth"]

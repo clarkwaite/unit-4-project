@@ -1,7 +1,7 @@
 FavoritesController.$inject = ['favoritesService', '$auth', '$state', '$stateParams'];
 function FavoritesController(favoritesService, $auth, $state, $stateParams){
   var vm = this;
-  vm.currentUser = $auth.user;
+  vm.currentUserId = $stateParams.userId;
   vm.favorites = [];
   //run when the page loads
   activate();
@@ -19,7 +19,7 @@ function FavoritesController(favoritesService, $auth, $state, $stateParams){
   }
 
 vm.deleteFromFavorites = function (favoriteArtistId) {
-    favoritesService.deleteFromFavorites(vm.currentUser.id, favoriteArtistId)
+    favoritesService.deleteFromFavorites(vm.currentUserId, favoriteArtistId)
       .then(res => {
         console.log(res.data.message);
         activate()
