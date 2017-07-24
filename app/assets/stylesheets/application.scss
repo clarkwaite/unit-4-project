@@ -226,6 +226,14 @@ body {
   #sign-up-image {
     align-self: center;
   }
+  #load{
+    padding: 0px;
+    align-self: center;
+    width:65px;
+    height:65px;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center;
+    margin: 0 auto;
+  }  
   @media (max-width: 575px) {
     #discover-bar a{
       font-size: 8.5px;

@@ -4,6 +4,7 @@ function EventsController(eventsService, $auth, $state, $stateParams, $http) {
   const vm = this;
   vm.data = null;
   vm.artist = null;
+  vm.userId = $auth.user.id;
 
   activate();
 
@@ -14,8 +15,14 @@ function EventsController(eventsService, $auth, $state, $stateParams, $http) {
   vm.searchEvent = function () {
     const eventSearched = vm.event;
     eventsService.searchEvent(eventSearched).then(function (res) {
-      vm.data = res;
-      console.log(res)
+      var state = document.readyState
+      if (state === 'complete') {
+        setTimeout(function () {
+          document.getElementById('interactive');
+          document.getElementById('load').style.visibility = "hidden";
+        }, 1000);
+        vm.data = res;
+      }
     })
   }
   vm.showEvent = function (event) {
