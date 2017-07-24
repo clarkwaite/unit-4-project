@@ -17,6 +17,16 @@ Sass
 
 HTTParty for Api Calls
 
+To run the project:
+
+• npm install
+
+• bundle install
+
+•$foreman start (enter in terminal)
+
+•visit http://localhost:5000
+
 ## App Objective:
 DiscoverSound was designed to allow a user to have one place to go to accomplish two things. 
 
