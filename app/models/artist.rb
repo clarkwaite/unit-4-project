@@ -4,4 +4,4 @@ class Artist < ApplicationRecord
   has_many :events, dependent: :destroy
   validates :musicgraph_id, uniqueness: true
 
-end #closed model
+end

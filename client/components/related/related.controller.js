@@ -9,13 +9,12 @@ function RelatedController(relatedService, $auth, $state, $stateParams) {
   activate();
 
   function activate() {
-    console.log(document.readyState)
     var state = document.readyState
     if (state === 'complete') {
       setTimeout(function () {
         document.getElementById('interactive');
         document.getElementById('load').style.visibility = "hidden";
-      }, 1000);
+      }, 5000);
     }
 
     relatedService.getRelatedArtists(vm.artistId)
