@@ -22,6 +22,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+ul {
+  padding: 0px;
+}
 .content {
   flex: 1 0 auto;
 }
@@ -49,19 +52,12 @@ body {
   }
   #jumbo-top-image {
     display: flex;
-    justify-content: right;
     justify-content: flex-end;
-  
   }
    #jumbo-bottom-image {
     display: flex;
-    justify-content: right;
     justify-content: flex-start;
-  }
-  #bottom-image {
-    max-height:400px;
-    max-width: 750px;
-    height: 100%;
+    overflow: hidden;
   }
   #large-home-image {
     max-height: 350px;
@@ -88,6 +84,15 @@ body {
     text-shadow: 2px 2px black;
     }
   }
+  .home-topic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+    color: rgba(150,150,150,1);
+    text-shadow: 2px 2px black;
+    }
+  }
   .discover-description {
     display: flex;
     flex-direction: column;
@@ -104,9 +109,13 @@ body {
    font-family: 'Audiowide', cursive;
    color: rgba(255,255,255,.6);
  }
+  #home-artist-search-button {
+    margin-bottom: 10px;
+  }
   .home-event {
     padding:5px;
-    margin: 5px;
+    max-width: 400px;
+    margin: 0 auto;
     p {
       margin-top: 3px;
     }

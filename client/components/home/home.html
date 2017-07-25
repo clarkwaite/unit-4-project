@@ -4,7 +4,7 @@
       <img src="http://www.giveasyoulive.com/blog/wp-content/uploads/2014/07/listening-to-music-711x300.jpg" class="img-fluid">
     </div>
     <div class="col-12" id='jumbo-one-text'>
-      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="artists({userId: $ctrl.currentUser.id})">Discover New Artists</a></h3>
+      <h3 class="navbar navbar-inverse navbar-static-top, home-topic"><a ui-sref="artists({userId: $ctrl.currentUser.id})">Discover New Artists</a></h3>
     </div>
   </div>
 </div>
@@ -14,11 +14,11 @@
       <h3>Search For An Artist That You Love.</h3>
       <h3>Get Recommendations For Something Similar.</h3>
       <br>
-      <button type="button" class="btn btn-outline-secondary"  ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</button>
+      <button type="button" class="btn btn-outline-secondary" id='home-artist-search-button'  ui-sref="artists({userId: $ctrl.currentUser.id})">Search For An Artist</button>
     </div>
     <div class="col-12, center">
-      <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'><a ui-sref="artists({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
-      <div class="col-12, home-event">
+      <h3 class="navbar navbar-inverse navbar-static-top, home-topic"><a ui-sref="artists({userId: $ctrl.currentUser.id})">See Who's Coming To Town</a></h3>
+      <div class="col-md-12, home-event">
         <span class='jumbo-one-text' ng-repeat='event in $ctrl.events'>
         <h3>{{event.lineup[0]}}</h3>
         <p>{{event.date | date:'EEEE MM/dd/yyyy'}}</p>
@@ -33,12 +33,12 @@
   </div>
 </div>
 <div class="col-12" class='jumbo-one-text'>
-  <h3 class="navbar navbar-inverse navbar-static-top" id='discover-bar'></h3>
+  <h3 class="navbar navbar-inverse navbar-static-top, home-topic"></h3>
 </div>
 <div class="jumbotron">
   <div class="row">
     <div class="col-12" id='jumbo-bottom-image'>
-      <img src="http://i.imgur.com/T5sPYnZ.jpg?2" id='bottom-image' class="img-fluid">
+      <img src="http://i.imgur.com/T5sPYnZ.jpg?3" id='bottom-image'class="img-fluid">
     </div>
   </div>
 </div>
