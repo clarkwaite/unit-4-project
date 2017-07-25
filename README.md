@@ -1,35 +1,38 @@
 # DiscoverSound
 
-[![homescreen](http://i.imgur.com/jusMzNE.png "DiscoverSound Home") ](http://discoversound.herokuapp.com)
-
-### An Angular/Rails application utilizing the Bandsintown and MusicGraph apis to search and favorites musicians and find tour dates and local concerts.
-
-Languages and frameworks used to create this app are AngularJS, SQL using ActiveRecord, CSS (Bootstrap) Express, and Node
-
-Also utilized were:
-
-
-Devise-token-auth/ng-token-auth for user login
-
-Omniauth
-
-Sass
-
-HTTParty for Api Calls
+[![homescreen](http://i.imgur.com/jusMzNE.png "DiscoverSound Home") ](http://discoversound.herokuapp.com)  
+Click Picture To See It Live!
 
 To run the project:
 
-• npm install
+• in the terminal run npm install
 
-• bundle install
+• in the terminal run npm bundle install
 
-•$foreman start (enter in terminal)
+• in the terminal run rails db:setup
 
-•visit http://localhost:5000
+• in the terminal run rails db:migrate
+
+• in the terminal run foreman start
+
+• visit http://localhost:5000
+
+### An Angular/Rails application utilizing the Bandsintown and MusicGraph apis to search and favorites musicians and find tour dates and local concerts.
+
+• Languages and frameworks used to create this app are AngularJS, SQL using ActiveRecord, CSS (Bootstrap) Express, and Node
+
+• Also utilized were:
+
+- Devise-token-auth/ng-token-auth for user login
+
+- Omniauth
+
+- Sass
+
+- HTTParty for Api Calls
 
 ## App Objective:
-DiscoverSound was designed to allow a user to have one place to go to accomplish two things. 
-
+DiscoverSound was designed to allow a user to have one place to go to accomplish two things.  
 
 Artist Search
 
