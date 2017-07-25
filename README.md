@@ -1,6 +1,7 @@
 # DiscoverSound
 
-[![homescreen](http://i.imgur.com/jusMzNE.png "DiscoverSound Home") ](http://discoversound.herokuapp.com)
+[![homescreen](http://i.imgur.com/jusMzNE.png "DiscoverSound Home") ](http://discoversound.herokuapp.com)  
+Click Picture To See It Live!
 
 To run the project:
 
