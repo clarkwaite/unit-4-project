@@ -17,7 +17,7 @@ To run the project:
 
 • visit http://localhost:5000
 
-### An Angular/Rails application utilizing the Bandsintown and MusicGraph apis to search and favorites musicians and find tour dates and local concerts.
+### An Angular/Rails application utilizing the Bandsintown and MusicGraph api's to search musicians and find tour dates. Bands can be added to a user's favorites to keep track of local concerts.
 
 • Languages and frameworks used to create this app are AngularJS, SQL using ActiveRecord, CSS (Bootstrap) Express, and Node
 
