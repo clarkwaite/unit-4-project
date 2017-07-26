@@ -1,13 +1,14 @@
 
 
 
-<img ng-src="http://loremflickr.com/400/250/concert" alt="Band Image" />
-<h3 ng-hide='!$ctrl.artist.main_genre.length'>Genre: {{$ctrl.artist.main_genre}}</h3>
-<h3 ng-hide='$ctrl.artist.main_genre.length'>Genre: Data Unavailable</h3>
-<h3 ng-hide='!$ctrl.artist.country_of_origin.length'>Nationality: {{$ctrl.artist.country_of_origin}}</h3>
-<h3 ng-hide='$ctrl.artist.country_of_origin.length'>Nationality: Data Unavailable</h3>
-<h3 ng-hide='!$ctrl.artist.decade.length'>Years Active: {{$ctrl.artist.decade}}</h3>
-<h3 ng-hide='$ctrl.artist.decade.length'>Years Active: Data Unavailable</h3>
-
- <button type="button" class="btn btn-outline-secondary"  ng-click='$ctrl.saveToFavorites($ctrl.artist)'>Favorite This Band</button>
- <button type="button" class="btn btn-outline-secondary"  ng-click='$ctrl.goToRelated($ctrl.artist)'>See Related Artists</button>
+<img ng-src="http://loremflickr.com/400/250/concert" class='img-responsive' alt="Band Image" />
+<h5 ng-hide='!$ctrl.artist.main_genre.length'><span class='bold'>Genre:</span> {{$ctrl.artist.main_genre}}</h5>
+<h5 ng-hide='$ctrl.artist.main_genre.length'><span class='bold'>Genre:</span> Data Unavailable</h5>
+<h5 ng-hide='!$ctrl.artist.country_of_origin.length'><span class='bold'>Nationality:</span> {{$ctrl.artist.country_of_origin}}</h5>
+<h5 ng-hide='$ctrl.artist.country_of_origin.length'><span class='bold'>Nationality:</span> Data Unavailable</h5>
+<h5 ng-hide='!$ctrl.artist.decade.length'><span class='bold'>Years Active:</span> {{$ctrl.artist.decade}}</h5>
+<h5 ng-hide='$ctrl.artist.decade.length'><span class='bold'>Years Active:</span> Data Unavailable</h5>
+<div class='center'>
+ <button type="button" class="btn btn-outline-secondary" id="favorite-button"  ng-click='$ctrl.saveToFavorites($ctrl.artist)'>Favorite Band</button>
+ <button type="button" class="btn btn-outline-secondary" id= "related-button"  ng-click='$ctrl.goToRelated($ctrl.artist)'>Related Artists</button>
+</div>

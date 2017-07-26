@@ -12,7 +12,7 @@
     <div id="load"></div>
     <ul>
       <li ng-repeat="artist in $ctrl.related.data">
-        <h3>{{artist.name}}</h3>
+        <h4>{{artist.name}}</h4>
         <h5>Similarity: {{artist.similarity * 100 | number:0}}%</h5>
         <h5><a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a></h5>
         <hr>

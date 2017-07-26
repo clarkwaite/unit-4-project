@@ -31,6 +31,9 @@ ul {
 .center {
   text-align: center;
 }
+.bold {
+  font-weight: 700;
+}
 .navbar-brand {
   font-family: 'Audiowide', cursive;
   font-weight: 700;
@@ -112,6 +115,10 @@ ul {
   #home-artist-search-button {
     margin-bottom: 10px;
   }
+  #favorite-button, #related-button {
+    padding: 3px;
+    font-size: 1em;
+  }
   .home-event {
     padding:5px;
     max-width: 400px;
@@ -157,6 +164,10 @@ ul {
     height: 35px;
     width: 100%;
     display: inline-block;
+    outline: 1px solid rgba(0,0,0,.8);
+  }
+  #event-input {
+    outline: 1px solid rgba(0,0,0,.8);
   }
   .artist-show {
     margin: 25px;
@@ -192,6 +203,12 @@ ul {
   .artists-results {
     display: inline-block;
     text-align: left;  
+  }
+  .artists-list {
+    list-style: none;
+    h4 {
+    font-family: 'Audiowide', cursive;
+   }
   }
   #event-input {
     height: 30px;
@@ -249,5 +266,8 @@ ul {
     }
     #sign-in-div h2{
       font-size: 24px;
+    }
+    .discover-description h3{
+      font-size: 19px;
     }
   }

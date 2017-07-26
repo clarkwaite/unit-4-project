@@ -1,9 +1,6 @@
 <div class='container' , id='artist-page'>
-
-  <h2 class='center'>Discover A New Sound</h2>
-  <h3 class='center'>Or Save A Band To Your Favorites To Track Events</h3>
-  <br>
-  <h4 class='center'>Either Way - Start By Searching Below!</h4>
+  <h3 class='center'>Start By Searching Below!</h3>
+  <p class='center'>Favorited Bands Will Display Their Tour Dates On The Home Page</p>
   <br>
   <div class='center'>
     <div class='artists-results'>
@@ -13,9 +10,10 @@
           <span><button class="btn btn-outline-secondary" id="artist-submit" type="submit" value="Search Artists">Submit</button></span>
         </div>
       </form>
-      <ul>
+      <ul class='artists-list'>
         <li ng-repeat="artist in $ctrl.data.data" ng-click='$ctrl.goToShow(artist)'>
-          <h3>{{artist.name}}</h3>
+          <h4>{{artist.name }} <i class="fa fa-bars" aria-hidden="true"></i></h4>
+          <hr>
           <div class='artist-show' ng-show="artist.show">
             <discover-artist artist="artist"></discover-artist>
           </div>
