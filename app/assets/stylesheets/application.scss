@@ -22,10 +22,10 @@ p {
   font-size: 16px;
 }
 h4 {
-    font-size: 30px;
+    font-size: 28px;
 }
 h5 {
-    font-size: 24px;
+    font-size: 23px;
 }
 body {
   display: flex;
@@ -203,7 +203,7 @@ ul {
   }
  .related-result-div {
    margin: 2px;
-   height: 150px;
+   height: 160px;
    border: 2px solid rgba(0,0,0,.8);
    background-color: rgba(0,0,0,.1);
  }
@@ -284,6 +284,9 @@ ul {
     background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center;
     margin: 0 auto;
   }  
+  .explore-artist {
+    margin: 3px;
+  }
   @media (max-width: 575px) {
     h1 {
       font-size: 23px;
@@ -293,6 +296,12 @@ ul {
     }
     h5 {
       font-size: 14px;
+    }
+    .related-result-div h5 {
+      font-size: 22px;
+    }
+    .related-result-div h4 {
+      font-size: 28px;
     }
     #discover-bar a{
       font-size: 8.5px;
