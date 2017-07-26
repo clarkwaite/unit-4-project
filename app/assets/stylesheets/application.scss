@@ -18,12 +18,25 @@ html, body {
   height: 100%;
   margin: 0px;
 }
+p {
+  font-size: 16px;
+}
+h4 {
+    font-size: 30px;
+}
+h5 {
+    font-size: 24px;
+}
 body {
   display: flex;
   flex-direction: column;
 }
 ul {
   padding: 0px;
+  list-style: none;
+}
+#events {
+  padding: 10px;
 }
 .content {
   flex: 1 0 auto;
@@ -34,13 +47,16 @@ ul {
 .bold {
   font-weight: 700;
 }
+.navbar {
+  margin: 0;
+  li {
+    font-size: 16px;
+  }
+}
 .navbar-brand {
   font-family: 'Audiowide', cursive;
   font-weight: 700;
   font-size: 27px;
-}
-.navbar {
-  margin: 0;
 }
 .jumbotron {
   background-repeat: no-repeat;
@@ -85,6 +101,7 @@ ul {
     a {
     color: rgba(150,150,150,1);
     text-shadow: 2px 2px black;
+    font-size: 13px;
     }
   }
   .home-topic {
@@ -148,7 +165,7 @@ ul {
   #sign-in-div {
     align-self: center;
     text-align: center;
-    max-width: 450px;
+    max-width: 600px;
     margin-top: 25px;
   }
   #states {    margin: 15px 0px;
@@ -160,7 +177,6 @@ ul {
   }
   #artist-search {
     max-width: 500px;
-    min-width: 200px;
     height: 35px;
     width: 100%;
     display: inline-block;
@@ -182,16 +198,24 @@ ul {
     display: inline-block;
     text-align: left;
   }
-   .align-related {
-    display: inline-block;
-    text-align: left;
-    ul {
-    list-style: none;
-    }
+  .related-results {
+    padding: 10px;
+  }
+ .related-result-div {
+   margin: 2px;
+   height: 150px;
+   border: 2px solid rgba(0,0,0,.8);
+   background-color: rgba(0,0,0,.1);
+ }
+  .no-padding {
+    padding: 0px;
   }
   .favorite-name {
-  text-align: center;
-  font-family: 'Audiowide', cursive;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+  }
+  .artist-name {
+    font-family: 'Audiowide', cursive
   }
   .favorite-list {
     list-style: none;
@@ -202,7 +226,7 @@ ul {
   }
   .artists-results {
     display: inline-block;
-    text-align: left;  
+    text-align: left;
   }
   .artists-list {
     list-style: none;
@@ -261,6 +285,15 @@ ul {
     margin: 0 auto;
   }  
   @media (max-width: 575px) {
+    h1 {
+      font-size: 23px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 14px;
+    }
     #discover-bar a{
       font-size: 8.5px;
     }
@@ -269,5 +302,13 @@ ul {
     }
     .discover-description h3{
       font-size: 19px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 450px) {
+    p {
+      font-size: 10px;
     }
   }

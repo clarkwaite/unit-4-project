@@ -4,19 +4,26 @@
   <p>If no artists show then go back and try again.</p>
   <p>If none show again then there is not enough info about your artist.</p>
   <br>
-  <button type="button" class="btn btn-outline-secondary"  ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
+  <button type="button" class="btn btn-outline-secondary" ui-sref="artists({userId: $ctrl.userId})">Go Back</button>
 </div>
 <div class='center'>
-  <div class='align-related'>
-    <br>
-    <div id="load"></div>
-    <ul>
-      <li ng-repeat="artist in $ctrl.related.data">
-        <h4>{{artist.name}}</h4>
-        <h5>Similarity: {{artist.similarity * 100 | number:0}}%</h5>
-        <h5><a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a></h5>
-        <hr>
-      </li>
-    </ul>
-  </div>
+  <br>
+  <div id="load"></div>
+  <ul>
+    <div class="related-results">
+      <div class="row">
+        <li ng-repeat="artist in $ctrl.related.data">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12, no-padding">
+            <div class="related-result-div">
+              <h3 class='artist-name'>
+                <u>{{artist.name}}</u>
+              </h3>
+              <h4>Similarity: {{artist.similarity * 100 | number:0}}%</h4>
+              <h4><a href='https://open.spotify.com/artist/{{artist.spotify_id}}' target="_blank">Explore Artist</a></h4>
+            </div>
+          </div>
+      </div>
+    </div>
+    </li>
+  </ul>
 </div>

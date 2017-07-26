@@ -1,36 +1,38 @@
-<div class='center'>
-  <h3>See If A Band Is Playing Near You!</h3>
-  <h4>Search A Band's Name To See Tour Dates For That Band</h4>
-  <br>
+<div id="events">
+  <div class='center'>
+    <h4>See If A Band Is Playing Near You!</h4>
+    <h4>Search A Band's Name To See Tour Dates For That Band</h4>
+    <br>
 
-  <form name="searchEvent" ng-submit="$ctrl.searchEvent()">
-    <div><input type="text" id="event-input" placeholder="   Enter A Band's Name" id='event-input' ng-model="$ctrl.event" required>
-      <span><button class="btn btn-outline-secondary"  type="submit" value="Search Event" ng-click='show=!show'>Submit</button></span>
-      <br>
-      <br>
-      <p>If no results appear then the band probably isn't on tour!</p>
-    </div>
-  </form>
-</div>
-<div class='center'>
-  <div id="load" ng-show='show'></div>
-  <div class='event-results'>
-    <ul>
-      <li ng-repeat="event in $ctrl.data">
-        <h4>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} | {{event.datetime | date:'EEEE MM/dd/yyyy'}}</h4>
-        <div>
-          <h5>{{event.venue.name}}</h5>
-          <h5>Line Up:<span ng-repeat="artist in event.lineup">
+    <form name="searchEvent" ng-submit="$ctrl.searchEvent()">
+      <div><input type="text" id="event-input" placeholder="   Enter A Band's Name" id='event-input' ng-model="$ctrl.event" required>
+        <span><button class="btn btn-outline-secondary"  type="submit" value="Search Event" ng-click='show=!show'>Submit</button></span>
+        <br>
+        <br>
+        <p>If nothing shows the band may not be touring!</p>
+      </div>
+    </form>
+  </div>
+  <div class='center'>
+    <div id="load" ng-show='show'></div>
+    <div class='event-results'>
+      <ul>
+        <li ng-repeat="event in $ctrl.data">
+          <h4>{{event.venue.city}}, {{event.venue.region}} - {{event.venue.country}} <br> {{event.datetime | date:'EEEE MM/dd/yyyy'}}</h4>
+          <div>
+            <h5>{{event.venue.name}}</h5>
+            <h5>Line Up:<span ng-repeat="artist in event.lineup">
             | {{artist}}</h5></span>
-            <a href={{event.offers[0].url}} target="_blank">Buy Tickets</a>
-        </div>
-        <hr>
-      </li>
-    </ul>
-    <div class='center'>
-      <button type="button" class="btn btn-outline-secondary" ui-sref="home({userId: $ctrl.userId})">Go Back</button>
-      <br>
-      <br>
+              <p><a href={{event.offers[0].url}} target="_blank">Buy Tickets</a></p>
+          </div>
+          <hr>
+        </li>
+      </ul>
+      <div class='center'>
+        <button type="button" class="btn btn-outline-secondary" ui-sref="home({userId: $ctrl.userId})">Go Back</button>
+        <br>
+        <br>
+      </div>
     </div>
   </div>
 </div>

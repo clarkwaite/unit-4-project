@@ -24,7 +24,7 @@
         <p>{{event.date | date:'EEEE MM/dd/yyyy'}}</p>
         <p>{{event.venue_name}}</p> 
         <p>{{event.city}}, {{event.region}} - {{event.country}}</p>
-        <a href='{{event.ticket_url}}'>Find Tickets</a>
+        <a href='{{event.ticket_url}}' target="_blank">Find Tickets</a>
         <hr>
       </span>
         <button type="button" class="btn btn-outline-secondary" ui-sref="events({userId: $ctrl.currentUser.id})">Search For More Shows</button>
