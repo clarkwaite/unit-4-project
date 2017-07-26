@@ -31,6 +31,12 @@ To run the project:
 
 - HTTParty for Api Calls
 
+- Angular UI View
+
+- MVC Architecture
+
+- RESTful URL
+
 ## App Objective:
 DiscoverSound was designed to allow a user to have one place to go to accomplish two things.  
 
