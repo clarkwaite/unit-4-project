@@ -13,7 +13,7 @@ function RelatedController(relatedService, $auth, $state, $stateParams) {
     if (state === 'complete') {
       setTimeout(function () {
         document.getElementById('interactive');
-        document.getElementById('load').style.visibility = "hidden";
+        document.getElementById('load').style.display = "none";
       }, 5000);
     }
 
