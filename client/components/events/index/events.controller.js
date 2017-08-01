@@ -18,7 +18,7 @@ function EventsController(eventsService, $auth, $state, $stateParams, $http) {
       var state = document.readyState
       if (state == 'complete') {
         document.getElementById('interactive');
-        document.getElementById('load').style.visibility = "hidden";
+        document.getElementById('load').style.display = "none";
         vm.data = res;
       }
     })
