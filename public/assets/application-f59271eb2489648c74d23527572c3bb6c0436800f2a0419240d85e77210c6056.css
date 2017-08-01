@@ -1,0 +1,558 @@
+/* line 1, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+/* line 22, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+p {
+  font-size: 16px;
+}
+
+/* line 25, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+h4 {
+  font-size: 28px;
+}
+
+/* line 28, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+h5 {
+  font-size: 23px;
+}
+
+/* line 31, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 35, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+/* line 39, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#events {
+  padding: 10px;
+}
+
+/* line 42, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.content {
+  flex: 1 0 auto;
+}
+
+/* line 45, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.center {
+  text-align: center;
+}
+
+/* line 48, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.bold {
+  font-weight: 700;
+}
+
+/* line 51, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.navbar {
+  margin: 0;
+}
+/* line 53, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.navbar li {
+  font-size: 16px;
+}
+
+/* line 57, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.navbar-brand {
+  font-family: 'Audiowide', cursive;
+  font-weight: 700;
+  font-size: 27px;
+}
+
+/* line 62, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.jumbotron {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: center top;
+  background-position: center bottom;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 73, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#jumbo-top-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 77, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#jumbo-bottom-image {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* line 82, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#large-home-image {
+  max-height: 350px;
+  max-width: 750px;
+  height: auto;
+}
+
+/* line 87, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.jumbo-one-text {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+}
+
+/* line 92, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.row {
+  margin: 0px;
+}
+
+/* line 95, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.flex {
+  display: flex;
+}
+
+/* line 98, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#discover-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 102, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#discover-bar a {
+  color: #969696;
+  text-shadow: 2px 2px black;
+  font-size: 13px;
+}
+
+/* line 108, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.home-topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 112, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.home-topic a {
+  color: #969696;
+  text-shadow: 2px 2px black;
+}
+
+/* line 117, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.discover-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+/* line 125, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.btn-secondary {
+  margin: 5px;
+}
+
+/* line 128, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.button {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Audiowide', cursive;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 133, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#home-artist-search-button {
+  margin-bottom: 10px;
+}
+
+/* line 136, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#favorite-button, #related-button {
+  padding: 3px;
+  font-size: 1em;
+}
+
+/* line 140, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.home-event {
+  padding: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* line 144, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.home-event p {
+  margin-top: 3px;
+}
+
+/* line 148, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#footer {
+  text-align: center;
+}
+
+/* line 151, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.footer {
+  margin: 0 auto;
+  font-family: 'Audiowide', cursive;
+  font-size: 14px;
+}
+
+/* line 156, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.error-messages {
+  font-weight: 700;
+  color: rgba(225, 25, 25, 0.8);
+}
+
+/* line 160, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#sign-up-div {
+  text-align: center;
+  align-self: center;
+  max-width: 450px;
+  margin-top: 15px;
+}
+
+/* line 166, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#sign-in-div {
+  align-self: center;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 25px;
+}
+
+/* line 172, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#states {
+  margin: 15px 0px;
+}
+
+/* line 174, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.searchArtist {
+  min-height: 50px;
+  text-align: center;
+  display: flex;
+}
+
+/* line 179, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#artist-search {
+  max-width: 500px;
+  height: 35px;
+  width: 100%;
+  display: inline-block;
+  outline: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+/* line 186, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#event-input {
+  outline: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+/* line 189, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.artist-show {
+  margin: 25px;
+}
+
+/* line 192, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.favorite-show {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+/* line 198, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.align-favorites {
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 202, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.related-results {
+  padding: 10px;
+}
+
+/* line 205, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.related-result-div {
+  margin: 2px;
+  height: 160px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 211, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.no-padding {
+  padding: 0px;
+}
+
+/* line 214, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.favorite-name {
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+}
+
+/* line 218, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.artist-name {
+  font-family: "Audiowide", cursive;
+}
+
+/* line 221, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.favorite-list {
+  list-style: none;
+}
+
+/* line 224, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.delete-favorite {
+  width: 200px;
+  align-self: center;
+}
+
+/* line 228, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.artists-results {
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 232, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.artists-list {
+  list-style: none;
+}
+/* line 234, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.artists-list h4 {
+  font-family: 'Audiowide', cursive;
+}
+
+/* line 238, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#event-input {
+  height: 30px;
+}
+
+/* line 241, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.event-results {
+  display: inline-block;
+  text-align: left;
+}
+/* line 244, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.event-results ul {
+  list-style: none;
+}
+
+/* line 248, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.sign-in-buttons {
+  margin: 5px;
+}
+
+/* line 251, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 259, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 0px;
+  font-family: 'Audiowide', cursive;
+  padding: 5px;
+}
+
+/* line 266, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#artist-submit {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+/* line 270, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 274, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#sign-in-image {
+  align-self: center;
+}
+
+/* line 277, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#sign-up-image {
+  align-self: center;
+}
+
+/* line 280, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+#load {
+  padding: 0px;
+  align-self: center;
+  width: 65px;
+  height: 65px;
+  background: url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center;
+  margin: 0 auto;
+}
+
+/* line 288, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+.explore-artist {
+  margin: 3px;
+}
+
+@media (max-width: 575px) {
+  /* line 292, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  h1 {
+    font-size: 23px;
+  }
+
+  /* line 295, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  h4 {
+    font-size: 20px;
+  }
+
+  /* line 298, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  h5 {
+    font-size: 14px;
+  }
+
+  /* line 301, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  .related-result-div h5 {
+    font-size: 22px;
+  }
+
+  /* line 304, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  .related-result-div h4 {
+    font-size: 28px;
+  }
+
+  /* line 307, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  #discover-bar a {
+    font-size: 8.5px;
+  }
+
+  /* line 310, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  #sign-in-div h2 {
+    font-size: 24px;
+  }
+
+  /* line 313, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  .discover-description h3 {
+    font-size: 19px;
+  }
+
+  /* line 316, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  /* line 321, /Users/clarkwaite/workspace/Unit_Projects/unit-4-project/app/assets/stylesheets/application.scss */
+  p {
+    font-size: 10px;
+  }
+}
